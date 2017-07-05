@@ -1,0 +1,3012 @@
+@charset "UTF-8";
+body,h1,h2,h3,h4,h5,h6,p,dd{margin:0;}
+ul,ol,dl{margin:0;padding:0;list-style:none;}
+img{border:none;vertical-align:middle;}
+a{text-decoration:none;color:#000;outline:none;}
+body{font:14px/1.5 'Microsoft Yahei',sans-serif;/*sans-serif 是手机默认字体*/}
+.clearfix::before,.clearfix::after{
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+/*狂傲不确定的居中方式
+    transform: translate(-50%,-50%);
+*/
+
+body{
+    min-width:1400px;
+    max-width:1920px;
+}
+/*头部*/
+#header{
+    position: relative;
+    width:100%;
+    height:628px;
+    background:url("../images/index/main.jpg") no-repeat center;
+}
+/*头部的flexed导航*/
+#nav{
+    min-width:1400px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 3;
+    width: 100%;
+    height:100px;
+    transition: .5s;
+}
+div#nav.hover{
+    background: rgba(255,255,255,.8);
+}
+#nav.scroll{
+    position: fixed;
+    background: rgba(255,255,255,.8);
+    z-index: 9999;
+}
+/*导航门*/
+#nav .mainList{
+    float: right;
+    width:710px;
+}
+#nav .mainList li{
+    float: left;
+}
+#nav .mainList li a{
+    font:16px/25px "Microsoft JhengHei UI Light";
+    font-weight:bold;
+    transition: .5s;
+}
+#nav .mainList li.mNav{
+    padding:38px 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+#nav .mainList li.line{
+    width:15px;
+    height:20px;
+    margin-top:38px;
+    background: url("../images/index/index.png") no-repeat -1541px -1440px;
+}
+#nav .mainList li.mNav:hover a{
+    color: #eb852c;
+}
+
+#nav .mainList li.mNav div.trangle{
+    position: absolute;
+    bottom:0;
+    width:0;
+    height:0;
+    border: 10px solid transparent;
+    border-bottom-color: #e1ebeb;
+    margin-left:20px;
+    opacity:0;
+    transition: .5s;
+}
+#nav .mainList li.hover >div.trangle{
+    opacity:1;
+}
+/*导航滑入详情-隐藏组件*/
+#nav .hide{
+    display: none;
+    position:fixed;
+    top:100px;
+    width:100%;
+    height:200px;
+    background: #e1ebeb;
+    overflow: hidden;
+}
+#nav .hide li {
+    display: none;
+    width:100%;
+    height:100%;
+}
+#nav .hide li a.hideList{
+    display: block;
+    float: right;
+    padding:50px;
+}
+#nav .hide li a.hideList p{
+    text-align: center;
+    font:16px/30px "Malgun Gothic Semilight";
+    color: #838374;
+}
+#nav .hide li span.line{
+    display: block;
+    float: right;
+    width:1px;
+    height:100px;
+    background: #ccc;
+    margin-top:50px;
+}
+
+#nav .hide li a.hideList .hideImg{
+    width:100px;
+    height:91px;
+    background: url("../images/index/index.png") no-repeat;
+}
+#nav .hide li a.hideList .hideImg1{
+    width:66px;
+    height:71px;
+    background-position: -1399px -230px;
+}
+#nav .hide li a.hideList .hideImg2{
+    width:72px;
+    height:70px;
+    background-position: -1399px -301px;
+}
+#nav .hide li a.hideList .hideImg3{
+    width:80px;
+    height:80px;
+    background: url("../images/index/wx.jpg") no-repeat center/80px;
+    border:2px solid #000;
+    border-radius:5px;
+}
+#nav .hide li a.hideList .hideImg4{
+    width:80px;
+    height:80px;
+    background: url("../images/index/wb.png") no-repeat center/80px;
+    border:2px solid #000;
+    border-radius:5px;
+}
+#nav .hide li a.hideList .hideImg5{
+    width:81px;
+    height:84px;
+    background-position: -541px -586px;
+}
+#nav .hide li a.hideList .hideImg6{
+    width:81px;
+    height:78px;
+    margin-bottom:5px;
+    background-position: -330px -587px;
+}
+
+/*NavLogo*/
+#nav .navLogo{
+    display: none;
+    float: left;
+    width:370px;
+    height:100%;
+    transition: .5s;
+}
+#nav .navLogo.scroll{
+    display: block;
+}
+#nav .navLogo .ercode{
+    float: left;
+    width:123px;
+    height:100%;
+}
+#nav .navLogo .ercode img{
+    float: left;
+    width:73px;
+    height:73px;
+    margin-top:10px;
+}
+#nav .navLogo .ercode p{
+    float: left;
+    width:14px;
+    font-size: 14px;
+    margin:10px 12px;
+}
+
+#nav .navLogo .logo{
+    float: left;
+    width:246px;
+    height:73px;
+    border-left:1px solid #ccc;
+    margin-top: 14px;
+}
+#nav .navLogo .logo .logoImg{
+    float: left;
+    width:73px;
+    height:73px;
+    margin:0 10px 0 10px;
+    border-radius: 10px;
+    background: url("../images/logo.png") no-repeat center/73px;
+}
+#nav .navLogo .logo .logoTxt1{
+    font-size:30px;
+    font-weight:bold;
+}
+#nav .navLogo .logo .logoTxt2{
+    font-size:16px;
+}
+
+
+/*左上部LOGO*/
+#header #hLogo{
+    opacity:0;
+    position: absolute;
+    top:60px;
+    left:-70px;
+    z-index: 4;
+    width:70px;
+    height:199px;
+    background: url("../images/index/hLogo.png");
+    transform: scale(1);
+    transition:opacity 1s,left 1s,transform .3s;
+}
+#header #hLogo.scale{
+    transform: scale(0);
+}
+
+/*
+*角色*!
+**********/
+/*
+**
+**
+********/
+#header #role{
+    position: absolute;
+    left:50%;
+    margin-left: -600px;
+    width:1200px;
+    height:100%;
+}
+#header #role p.cover{
+    z-index: 5;
+    position: absolute;
+    left:48px;
+    bottom:45px;
+    width:805px;
+    height:23px;
+    background: url("../images/index/bottomLine.png") no-repeat center;
+    user-select: none;
+}
+#header #role p.rolBtn{
+    position: absolute;
+    right:230px;
+    top:50%;
+    margin-top:-33px;
+    width:41px;
+    height:66px;
+    background: url("../images/index/index.png") no-repeat -1400px -439px;
+    cursor: pointer;
+}
+#header #role .rol .man{
+    opacity:1;
+    transition: 1s;
+}
+#header #role .rol .man.hide{
+    opacity:0;
+    left:150px;
+}
+#header #role .rol1 .man1{
+    position: absolute;
+    left:65px;
+    bottom:45px;
+    width:470px;
+    height:537px;
+    background: url("../images/index/role/role1.png");
+}
+#header #role .rol1 .man2{
+    position: absolute;
+    left:365px;
+    bottom:45px;
+    width:423px;
+    height:544px;
+    background: url("../images/index/role/role2.png");
+}
+#header #role .rol2 .man3{
+    position: absolute;
+    left:300px;
+    bottom:45px;
+    width:503px;
+    height:501px;
+    background: url("../images/index/role/role3.png");
+}
+#header #role .rol2 .man4{
+    position: absolute;
+    left:65px;
+    bottom:45px;
+    width:491px;
+    height:583px;
+    background: url("../images/index/role/role4.png");
+}
+
+#header #role .serveImg{
+    position: absolute;
+    bottom:65px;
+    width:120px;
+    height:105px;
+    background: url("../images/index/sever.gif") no-repeat center/120px 105px;
+    cursor: pointer;
+}
+#header #role .serveImg:hover{
+    opacity:.8;
+}
+/*
+**服务器列表
+****/
+#header #serve{
+    z-index: 6;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(255,255,255,.8);
+}
+#header #serve.hide{
+    display: none;
+}
+
+#header #serve .sBg{
+    position: absolute;
+    left:50%;
+    margin-left:-800px;
+    width:1400px;
+    height:724px;
+    padding:50px;
+    background: url("../images/index/serveBg.png") no-repeat;
+    transform: scale(1);
+    opacity:1;
+    transition: .6s;
+}
+#header #serve .sBg.hide{
+    transform: scale(0);
+    opacity:0;
+}
+
+#header #serve .sBg .sBox{
+    position: absolute;
+    top:132px;
+    left:335px;
+    width:1150px;
+    height:590px;
+}
+
+#header #serve .sBg .sBox .serveArea{
+    position: relative;
+    float: left;
+    width:245px;
+    height:525px;
+}
+
+#header #serve .sBg .sBox .serveArea.sLast{
+    width:130px;
+}
+
+#header #serve .sBg .sBox .serveArea .sTit{
+    font:13px/30px "Microsoft JhengHei UI Light";
+    font-weight:bold;
+}
+#header #serve .sBg .sBox .serveArea .sArea{
+    padding:15px;
+    height:495px;
+    border-top:1px dashed #ccc;
+    border-left:1px solid #ccc;
+    overflow: auto;
+}
+#header #serve .sBg .sBox .serveArea .sArea .sList{
+    float: left;
+    width:90px;
+    height:90px;
+    margin-top:5px;
+    margin-left:5px;
+}
+#header #serve .sBg .sBox .serveArea .sArea .sList p.sLImg{
+    width:60px;
+    height:62px;
+    background: url("../images/index/index.png") no-repeat -1488px -1290px;
+}
+
+#header #serve .sBg .sBox .serveArea .sArea .sList p.sLName{
+    text-indent:10px;
+    font-family: "Microsoft New Tai Lue";
+}
+
+#header #serve .sBg .sBox .sBand{
+    position: absolute;
+    right:10px;
+    top:7px;
+    width:250px;
+    height:585px;
+}
+#header #serve .sBg .sBox .sBand .sBandImg1{
+    height:360px;
+    width:127px;
+    background: url("../images/index/index.png") no-repeat -632px 0px;
+}
+#header #serve .sBg .sBox .sBand .sBandBtn{
+    width:100px;
+    height: 30px;
+    margin:5px 0 5px 33px;
+    font:14px/30px "Microsoft yahei";
+    text-align: center;
+    color: #fff;
+    background: #c9b27c;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#header #serve .sBg .sBox .sBand .sBandBtn:hover{
+    background: #e9ce8f;
+}
+
+#header #serve .sBg .sBox .sBand .sBandImg2{
+    height:177px;
+    width:255px;
+    margin-top:13px;
+    background: url("../images/index/index.png") no-repeat -330px -855px;
+}
+
+#header #serve .sBg .btnClose{
+    position: absolute;
+    right: 100px;
+    top:98px;
+    width:34px;
+    height:32px;
+    background: url("../images/index/index.png") no-repeat -1440px -715px;
+    cursor: pointer;
+    transition: .5s;
+}
+#header #serve .sBg .btnClose:hover{
+    transform: rotate(360deg);
+}
+@charset "UTF-8";
+body,h1,h2,h3,h4,h5,h6,p,dd{margin:0;}
+ul,ol,dl{margin:0;padding:0;list-style:none;}
+img{border:none;vertical-align:middle;}
+a{text-decoration:none;color:#000;outline:none;}
+body{font:14px/1.5 'Microsoft Yahei',sans-serif;/*sans-serif 是手机默认字体*/}
+.clearfix::before,.clearfix::after{
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+body{
+    min-width:1400px;
+}
+/*头部*/
+#header{
+    position: relative;
+    width:100%;
+    height:628px;
+    background:url("../images/index/main.jpg") no-repeat center;
+}
+/*头部的flexed导航*/
+#nav{
+    min-width:1400px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 3;
+    width: 100%;
+    height:100px;
+    transition: .5s;
+}
+div#nav.hover{
+    background: rgba(255,255,255,.8);
+}
+#nav.scroll{
+    position: fixed;
+    background: rgba(255,255,255,.8);
+}
+/*导航门*/
+#nav .mainList{
+    float: right;
+    width:710px;
+}
+#nav .mainList li{
+    float: left;
+}
+#nav .mainList li a{
+    font:16px/25px "Microsoft JhengHei UI Light";
+    font-weight:bold;
+    transition: .5s;
+}
+#nav .mainList li.mNav{
+    padding:38px 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+#nav .mainList li.line{
+    width:15px;
+    height:20px;
+    margin-top:38px;
+    background: url("../images/index/index.png") no-repeat -1541px -1440px;
+}
+#nav .mainList li.mNav:hover a{
+    color: #eb852c;
+}
+
+#nav .mainList li.mNav div.trangle{
+    position: absolute;
+    bottom:0;
+    width:0;
+    height:0;
+    border: 10px solid transparent;
+    border-bottom-color: #e1ebeb;
+    margin-left:20px;
+    opacity:0;
+    transition: .5s;
+}
+#nav .mainList li.hover >div.trangle{
+    opacity:1;
+}
+/*导航滑入详情-隐藏组件*/
+#nav .hide{
+    display: none;
+    position:fixed;
+    top:100px;
+    width:100%;
+    height:200px;
+    background: #e1ebeb;
+    overflow: hidden;
+}
+#nav .hide li {
+    display: none;
+    width:100%;
+    height:100%;
+}
+#nav .hide li a.hideList{
+    display: block;
+    float: right;
+    padding:50px;
+}
+#nav .hide li a.hideList p{
+    text-align: center;
+    font:16px/30px "Malgun Gothic Semilight";
+    color: #838374;
+}
+#nav .hide li span.line{
+    display: block;
+    float: right;
+    width:1px;
+    height:100px;
+    background: #ccc;
+    margin-top:50px;
+}
+
+#nav .hide li a.hideList .hideImg{
+    width:100px;
+    height:91px;
+    background: url("../images/index/index.png") no-repeat;
+}
+#nav .hide li a.hideList .hideImg1{
+    width:66px;
+    height:71px;
+    background-position: -1399px -230px;
+}
+#nav .hide li a.hideList .hideImg2{
+    width:72px;
+    height:70px;
+    background-position: -1399px -301px;
+}
+#nav .hide li a.hideList .hideImg3{
+    width:80px;
+    height:80px;
+    background: url("../images/index/wx.jpg") no-repeat center/80px;
+    border:2px solid #000;
+    border-radius:5px;
+}
+#nav .hide li a.hideList .hideImg4{
+    width:80px;
+    height:80px;
+    background: url("../images/index/wb.png") no-repeat center/80px;
+    border:2px solid #000;
+    border-radius:5px;
+}
+#nav .hide li a.hideList .hideImg5{
+    width:81px;
+    height:84px;
+    background-position: -541px -586px;
+}
+#nav .hide li a.hideList .hideImg6{
+    width:81px;
+    height:78px;
+    margin-bottom:5px;
+    background-position: -330px -587px;
+}
+
+/*NavLogo*/
+#nav .navLogo{
+    display: none;
+    float: left;
+    width:370px;
+    height:100%;
+    transition: .5s;
+}
+#nav .navLogo.scroll{
+    display: block;
+}
+#nav .navLogo .ercode{
+    float: left;
+    width:123px;
+    height:100%;
+}
+#nav .navLogo .ercode img{
+    float: left;
+    width:73px;
+    height:73px;
+    margin-top:10px;
+}
+#nav .navLogo .ercode p{
+    float: left;
+    width:14px;
+    font-size: 14px;
+    margin:10px 12px;
+}
+
+#nav .navLogo .logo{
+    float: left;
+    width:246px;
+    height:73px;
+    border-left:1px solid #ccc;
+    margin-top: 14px;
+}
+#nav .navLogo .logo .logoImg{
+    float: left;
+    width:73px;
+    height:73px;
+    margin:0 10px 0 10px;
+    border-radius: 10px;
+    background: url("../images/logo.png") no-repeat center/73px;
+}
+#nav .navLogo .logo .logoTxt1{
+    font-size:30px;
+    font-weight:bold;
+}
+#nav .navLogo .logo .logoTxt2{
+    font-size:16px;
+}
+
+
+/*左上部LOGO*/
+#header #hLogo{
+    opacity:0;
+    position: absolute;
+    top:60px;
+    left:-70px;
+    z-index: 4;
+    width:70px;
+    height:199px;
+    background: url("../images/index/hLogo.png");
+    transform: scale(1);
+    transition:opacity 1s,left 1s,transform .3s;
+}
+#header #hLogo.scale{
+    transform: scale(0);
+}
+
+/*
+*角色*!
+**********/
+/*
+**
+**
+********/
+#header #role{
+    position: absolute;
+    left:50%;
+    margin-left: -600px;
+    width:1200px;
+    height:100%;
+}
+#header #role p.cover{
+    z-index: 5;
+    position: absolute;
+    left:48px;
+    bottom:45px;
+    width:805px;
+    height:23px;
+    background: url("../images/index/bottomLine.png") no-repeat center;
+    user-select: none;
+}
+#header #role p.rolBtn{
+    position: absolute;
+    right:230px;
+    top:50%;
+    margin-top:-33px;
+    width:41px;
+    height:66px;
+    background: url("../images/index/index.png") no-repeat -1400px -439px;
+    cursor: pointer;
+}
+#header #role .rol .man{
+    opacity:1;
+    transition: 1s;
+}
+#header #role .rol .man.hide{
+    opacity:0;
+    left:150px;
+}
+#header #role .rol1 .man1{
+    position: absolute;
+    left:65px;
+    bottom:45px;
+    width:470px;
+    height:537px;
+    background: url("../images/index/role/role1.png");
+}
+#header #role .rol1 .man2{
+    position: absolute;
+    left:365px;
+    bottom:45px;
+    width:423px;
+    height:544px;
+    background: url("../images/index/role/role2.png");
+}
+#header #role .rol2 .man3{
+    position: absolute;
+    left:300px;
+    bottom:45px;
+    width:503px;
+    height:501px;
+    background: url("../images/index/role/role3.png");
+}
+#header #role .rol2 .man4{
+    position: absolute;
+    left:65px;
+    bottom:45px;
+    width:491px;
+    height:583px;
+    background: url("../images/index/role/role4.png");
+}
+
+#header #role .serveImg{
+    position: absolute;
+    bottom:65px;
+    width:120px;
+    height:105px;
+    background: url("../images/index/sever.gif") no-repeat center/120px 105px;
+    cursor: pointer;
+}
+#header #role .serveImg:hover{
+    opacity:.8;
+}
+/*
+**服务器列表
+****/
+#header #serve{
+    z-index: 6;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(255,255,255,.8);
+}
+#header #serve.hide{
+    display: none;
+}
+
+#header #serve .sBg{
+    position: absolute;
+    left:50%;
+    margin-left:-800px;
+    width:1400px;
+    height:724px;
+    padding:50px;
+    background: url("../images/index/serveBg.png") no-repeat;
+    transform: scale(1);
+    opacity:1;
+    transition: .6s;
+}
+#header #serve .sBg.hide{
+    transform: scale(0);
+    opacity:0;
+}
+
+#header #serve .sBg .sBox{
+    position: absolute;
+    top:132px;
+    left:335px;
+    width:1150px;
+    height:590px;
+}
+
+#header #serve .sBg .sBox .serveArea{
+    position: relative;
+    float: left;
+    width:245px;
+    height:525px;
+}
+
+#header #serve .sBg .sBox .serveArea.sLast{
+    width:130px;
+}
+
+#header #serve .sBg .sBox .serveArea .sTit{
+    font:13px/30px "Microsoft JhengHei UI Light";
+    font-weight:bold;
+}
+#header #serve .sBg .sBox .serveArea .sArea{
+    padding:15px;
+    height:495px;
+    border-top:1px dashed #ccc;
+    border-left:1px solid #ccc;
+    overflow: auto;
+}
+#header #serve .sBg .sBox .serveArea .sArea .sList{
+    float: left;
+    width:90px;
+    height:90px;
+    margin-top:5px;
+    margin-left:5px;
+}
+#header #serve .sBg .sBox .serveArea .sArea .sList p.sLImg{
+    width:60px;
+    height:62px;
+    background: url("../images/index/index.png") no-repeat -1488px -1290px;
+}
+
+#header #serve .sBg .sBox .serveArea .sArea .sList p.sLName{
+    text-indent:10px;
+    font-family: "Microsoft New Tai Lue";
+}
+
+#header #serve .sBg .sBox .sBand{
+    position: absolute;
+    right:10px;
+    top:7px;
+    width:250px;
+    height:585px;
+}
+#header #serve .sBg .sBox .sBand .sBandImg1{
+    height:360px;
+    width:127px;
+    background: url("../images/index/index.png") no-repeat -632px 0px;
+}
+#header #serve .sBg .sBox .sBand .sBandBtn{
+    width:100px;
+    height: 30px;
+    margin:5px 0 5px 33px;
+    font:14px/30px "Microsoft yahei";
+    text-align: center;
+    color: #fff;
+    background: #c9b27c;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#header #serve .sBg .sBox .sBand .sBandBtn:hover{
+    background: #e9ce8f;
+}
+
+#header #serve .sBg .sBox .sBand .sBandImg2{
+    height:177px;
+    width:255px;
+    margin-top:13px;
+    background: url("../images/index/index.png") no-repeat -330px -855px;
+}
+
+#header #serve .sBg .btnClose{
+    position: absolute;
+    right: 100px;
+    top:98px;
+    width:34px;
+    height:32px;
+    background: url("../images/index/index.png") no-repeat -1440px -715px;
+    cursor: pointer;
+    transition: .5s;
+}
+#header #serve .sBg .btnClose:hover{
+    transform: rotate(360deg);
+}
+@charset "UTF-8";
+body,h1,h2,h3,h4,h5,h6,p,dd{margin:0;}
+ul,ol,dl{margin:0;padding:0;list-style:none;}
+img{border:none;vertical-align:middle;}
+a{text-decoration:none;color:#000;outline:none;}
+body{font:14px/1.5 'Microsoft Yahei',sans-serif;/*sans-serif 是手机默认字体*/}
+.clearfix::before,.clearfix::after{
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+body{
+    min-width:1400px;
+}
+/*头部*/
+#header{
+    position: relative;
+    width:100%;
+    height:628px;
+    background:url("../images/index/main.jpg") no-repeat center;
+}
+/*头部的flexed导航*/
+#nav{
+    min-width:1400px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 3;
+    width: 100%;
+    height:100px;
+    transition: .5s;
+}
+div#nav.hover{
+    background: rgba(255,255,255,.8);
+}
+#nav.scroll{
+    position: fixed;
+    background: rgba(255,255,255,.8);
+}
+/*导航门*/
+#nav .mainList{
+    float: right;
+    width:710px;
+}
+#nav .mainList li{
+    float: left;
+}
+#nav .mainList li a{
+    font:16px/25px "Microsoft JhengHei UI Light";
+    font-weight:bold;
+    transition: .5s;
+}
+#nav .mainList li.mNav{
+    padding:38px 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+#nav .mainList li.line{
+    width:15px;
+    height:20px;
+    margin-top:38px;
+    background: url("../images/index/index.png") no-repeat -1541px -1440px;
+}
+#nav .mainList li.mNav:hover a{
+    color: #eb852c;
+}
+
+#nav .mainList li.mNav div.trangle{
+    position: absolute;
+    bottom:0;
+    width:0;
+    height:0;
+    border: 10px solid transparent;
+    border-bottom-color: #e1ebeb;
+    margin-left:20px;
+    opacity:0;
+    transition: .5s;
+}
+#nav .mainList li.hover >div.trangle{
+    opacity:1;
+}
+/*导航滑入详情-隐藏组件*/
+#nav .hide{
+    display: none;
+    position:fixed;
+    top:100px;
+    width:100%;
+    height:200px;
+    background: #e1ebeb;
+    overflow: hidden;
+}
+#nav .hide li {
+    display: none;
+    width:100%;
+    height:100%;
+}
+#nav .hide li a.hideList{
+    display: block;
+    float: right;
+    padding:50px;
+}
+#nav .hide li a.hideList p{
+    text-align: center;
+    font:16px/30px "Malgun Gothic Semilight";
+    color: #838374;
+}
+#nav .hide li span.line{
+    display: block;
+    float: right;
+    width:1px;
+    height:100px;
+    background: #ccc;
+    margin-top:50px;
+}
+
+#nav .hide li a.hideList .hideImg{
+    width:100px;
+    height:91px;
+    background: url("../images/index/index.png") no-repeat;
+}
+#nav .hide li a.hideList .hideImg1{
+    width:66px;
+    height:71px;
+    background-position: -1399px -230px;
+}
+#nav .hide li a.hideList .hideImg2{
+    width:72px;
+    height:70px;
+    background-position: -1399px -301px;
+}
+#nav .hide li a.hideList .hideImg3{
+    width:80px;
+    height:80px;
+    background: url("../images/index/wx.jpg") no-repeat center/80px;
+    border:2px solid #000;
+    border-radius:5px;
+}
+#nav .hide li a.hideList .hideImg4{
+    width:80px;
+    height:80px;
+    background: url("../images/index/wb.png") no-repeat center/80px;
+    border:2px solid #000;
+    border-radius:5px;
+}
+#nav .hide li a.hideList .hideImg5{
+    width:81px;
+    height:84px;
+    background-position: -541px -586px;
+}
+#nav .hide li a.hideList .hideImg6{
+    width:81px;
+    height:78px;
+    margin-bottom:5px;
+    background-position: -330px -587px;
+}
+
+/*NavLogo*/
+#nav .navLogo{
+    display: none;
+    float: left;
+    width:370px;
+    height:100%;
+    transition: .5s;
+}
+#nav .navLogo.scroll{
+    display: block;
+}
+#nav .navLogo .ercode{
+    float: left;
+    width:123px;
+    height:100%;
+}
+#nav .navLogo .ercode img{
+    float: left;
+    width:73px;
+    height:73px;
+    margin-top:10px;
+}
+#nav .navLogo .ercode p{
+    float: left;
+    width:14px;
+    font-size: 14px;
+    margin:10px 12px;
+}
+
+#nav .navLogo .logo{
+    float: left;
+    width:246px;
+    height:73px;
+    border-left:1px solid #ccc;
+    margin-top: 14px;
+}
+#nav .navLogo .logo .logoImg{
+    float: left;
+    width:73px;
+    height:73px;
+    margin:0 10px 0 10px;
+    border-radius: 10px;
+    background: url("../images/logo.png") no-repeat center/73px;
+}
+#nav .navLogo .logo .logoTxt1{
+    font-size:30px;
+    font-weight:bold;
+}
+#nav .navLogo .logo .logoTxt2{
+    font-size:16px;
+}
+
+
+/*左上部LOGO*/
+#header #hLogo{
+    opacity:0;
+    position: absolute;
+    top:60px;
+    left:-70px;
+    z-index: 4;
+    width:70px;
+    height:199px;
+    background: url("../images/index/hLogo.png");
+    transform: scale(1);
+    transition:opacity 1s,left 1s,transform .3s;
+}
+#header #hLogo.scale{
+    transform: scale(0);
+}
+
+/*
+*角色*!
+**********/
+/*
+**
+**
+********/
+#header #role{
+    position: absolute;
+    left:50%;
+    margin-left: -600px;
+    width:1200px;
+    height:100%;
+}
+#header #role p.cover{
+    z-index: 5;
+    position: absolute;
+    left:48px;
+    bottom:45px;
+    width:805px;
+    height:23px;
+    background: url("../images/index/bottomLine.png") no-repeat center;
+    user-select: none;
+}
+#header #role p.rolBtn{
+    position: absolute;
+    right:230px;
+    top:50%;
+    margin-top:-33px;
+    width:41px;
+    height:66px;
+    background: url("../images/index/index.png") no-repeat -1400px -439px;
+    cursor: pointer;
+}
+#header #role .rol .man{
+    opacity:1;
+    transition: 1s;
+}
+#header #role .rol .man.hide{
+    opacity:0;
+    left:150px;
+}
+#header #role .rol1 .man1{
+    position: absolute;
+    left:65px;
+    bottom:45px;
+    width:470px;
+    height:537px;
+    background: url("../images/index/role/role1.png");
+}
+#header #role .rol1 .man2{
+    position: absolute;
+    left:365px;
+    bottom:45px;
+    width:423px;
+    height:544px;
+    background: url("../images/index/role/role2.png");
+}
+#header #role .rol2 .man3{
+    position: absolute;
+    left:300px;
+    bottom:45px;
+    width:503px;
+    height:501px;
+    background: url("../images/index/role/role3.png");
+}
+#header #role .rol2 .man4{
+    position: absolute;
+    left:65px;
+    bottom:45px;
+    width:491px;
+    height:583px;
+    background: url("../images/index/role/role4.png");
+}
+
+#header #role .serveImg{
+    z-index: 7;
+    position: absolute;
+    bottom:65px;
+    width:120px;
+    height:105px;
+    background: url("../images/index/sever.gif") no-repeat center/120px 105px;
+    cursor: pointer;
+}
+#header #role .serveImg:hover{
+    opacity:.8;
+}
+/*
+**服务器列表
+****/
+#header #serve{
+    z-index: 9999;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(255,255,255,.8);
+}
+#header #serve.hide{
+    display: none;
+}
+
+#header #serve .sBg{
+    position: absolute;
+    left:50%;
+    margin-left:-800px;
+    width:1400px;
+    height:724px;
+    padding:50px;
+    background: url("../images/index/serveBg.png") no-repeat;
+    transform: scale(1);
+    opacity:1;
+    transition: .6s;
+}
+#header #serve .sBg.hide{
+    transform: scale(0);
+    opacity:0;
+}
+
+#header #serve .sBg .sBox{
+    position: absolute;
+    top:132px;
+    left:335px;
+    width:1150px;
+    height:590px;
+}
+
+#header #serve .sBg .sBox .serveArea{
+    position: relative;
+    float: left;
+    width:245px;
+    height:525px;
+}
+
+#header #serve .sBg .sBox .serveArea.sLast{
+    width:130px;
+}
+
+#header #serve .sBg .sBox .serveArea .sTit{
+    font:13px/30px "Microsoft JhengHei UI Light";
+    font-weight:bold;
+}
+#header #serve .sBg .sBox .serveArea .sArea{
+    padding:15px;
+    height:495px;
+    border-top:1px dashed #ccc;
+    border-left:1px solid #ccc;
+    overflow: auto;
+}
+#header #serve .sBg .sBox .serveArea .sArea .sList{
+    float: left;
+    width:90px;
+    height:90px;
+    margin-top:5px;
+    margin-left:5px;
+}
+#header #serve .sBg .sBox .serveArea .sArea .sList p.sLImg{
+    width:60px;
+    height:62px;
+    background: url("../images/index/index.png") no-repeat -1488px -1290px;
+}
+
+#header #serve .sBg .sBox .serveArea .sArea .sList p.sLName{
+    text-indent:10px;
+    font-family: "Microsoft New Tai Lue";
+}
+
+#header #serve .sBg .sBox .sBand{
+    position: absolute;
+    right:10px;
+    top:7px;
+    width:250px;
+    height:585px;
+}
+#header #serve .sBg .sBox .sBand .sBandImg1{
+    height:360px;
+    width:127px;
+    background: url("../images/index/index.png") no-repeat -632px 0px;
+}
+#header #serve .sBg .sBox .sBand .sBandBtn{
+    width:100px;
+    height: 30px;
+    margin:5px 0 5px 33px;
+    font:14px/30px "Microsoft yahei";
+    text-align: center;
+    color: #fff;
+    background: #c9b27c;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#header #serve .sBg .sBox .sBand .sBandBtn:hover{
+    background: #e9ce8f;
+}
+
+#header #serve .sBg .sBox .sBand .sBandImg2{
+    height:177px;
+    width:255px;
+    margin-top:13px;
+    background: url("../images/index/index.png") no-repeat -330px -855px;
+}
+
+#header #serve .sBg .btnClose{
+    position: absolute;
+    right: 100px;
+    top:98px;
+    width:34px;
+    height:32px;
+    background: url("../images/index/index.png") no-repeat -1440px -715px;
+    cursor: pointer;
+    transition: .5s;
+}
+#header #serve .sBg .btnClose:hover{
+    transform: rotate(360deg);
+}
+
+/*Content*/
+#content{
+    position: relative;
+    margin-top:-213px;
+    min-width: 1400px;
+    width: 100%;
+    height:4024px;
+    overflow: hidden;
+}
+#content .MainContent{
+    width: 1400px;
+    height: 300px;
+    margin: 195px auto 0 auto;
+}
+/*日历部分*/
+#content .calendar{
+    z-index: 6;
+    position: absolute;
+    left:50%;
+    margin-left:242px;
+    width: 707px;
+    height:1110px;
+    background: url("../images/index/calendar.png") no-repeat bottom center;
+}
+#content .calendar>p{
+    position: absolute;
+    left:25px;
+    cursor: pointer;
+    overflow: hidden;
+    transition:left .3s,height .3s;
+}
+#content .calendar .caleTit{
+    top:0px;
+    display: block;
+    width:315px;
+    height:170px;
+    background: url("../images/index/index.png")  -584px -853px;
+}
+#content .calendar .douji{
+    top:150px;
+    width:315px;
+    height:100px;
+    background: url("../images/index/index.png") -660px -1044px;
+}
+#content .calendar .douji.show{
+    left:50px;
+    height:206px;
+    /*background: url("../images/index/index.png") -758px -4px;*/
+}
+#content .calendar .douji span{
+    display: block;
+    width:205px;
+    margin: 50px 0 0 25px;
+}
+#content .calendar .douji strong{
+    display: block;
+    width:245px;
+    margin-left:25px;
+    margin-top:20px;
+}
+
+#content .calendar .tiaozhanBoss{
+    left:-2px;
+    top:253px;
+    width:321px;
+    height:89px;
+    background: url("../images/index/index.png") -618px -1300px;
+}
+#content .calendar .tiaozhanBoss.show{
+    left:25px;
+    height:363px;
+    /*background: url("../images/index/index.png") -311px 0;*/
+}
+#content .calendar .tiaozhanBoss span{
+    display: block;
+    width:157px;
+    margin-left:160px;
+    margin-top:40px;
+}
+#content .calendar .tiaozhanBoss strong{
+    display: block;
+    width:200px;
+    margin-top:8px;
+    margin-left:60px;
+    font-size:13px;
+}
+
+#content .calendar .jijiezhijing{
+    top:343px;
+    width:304px;
+    height:90px;
+    background: url("../images/index/index.png") -308px -1300px;
+}
+#content .calendar .jijiezhijing.show{
+    left:50px;
+    height:184px;
+    /*background: url("../images/index/index.png") -621px -669px;*/
+}
+#content .calendar .jijiezhijing span{
+    display: block;
+    width:140px;
+    margin: 40px 0 0 25px;
+}
+#content .calendar .jijiezhijing strong{
+    display: block;
+    width:245px;
+    margin-left:25px;
+    margin-top:20px;
+}
+
+#content .calendar .shishenweipai{
+    top:433px;
+    width:294px;
+    height:94px;
+    background: url("../images/index/index.png") -301px -1193px;
+}
+#content .calendar .shishenweipai.show{
+    left:50px;
+    height:184px;
+    /*background: url("../images/index/index.png") -327px -669px;*/
+}
+#content .calendar .shishenweipai span{
+    display: block;
+    width:157px;
+    margin-left:133px;
+    margin-top:40px;
+}
+#content .calendar .shishenweipai strong{
+    display: block;
+    width:200px;
+    margin-top:17px;
+    margin-left:25px;
+    font-size:13px;
+}
+
+#content .calendar .yuhunfuben{
+    top:535px;
+    width:314px;
+    height:80px;
+    background: url("../images/index/index.png") -330px -1053px;
+}
+#content .calendar .yuhunfuben.show{
+    left:50px;
+    height:290px;
+    /*background: url("../images/index/index.png") 0 -376px;*/
+}
+#content .calendar .yuhunfuben span{
+    display: block;
+    width:245px;
+    margin: 40px 0 0 12px;
+}
+#content .calendar .yuhunfuben strong{
+    display: block;
+    width:257px;
+    margin-left:10px;
+    margin-top:8px;
+}
+
+#content .calendar .tiaozhanfuben{
+    left:13px;
+    top:618px;
+    width:305px;
+    height:94px;
+    background: url("../images/index/index.png") -3px -1300px;
+}
+#content .calendar .tiaozhanfuben.show{
+    left:42px;
+    height:364px;
+    /*background: url("../images/index/index.png") 0px 0px;*/
+}
+#content .calendar .tiaozhanfuben span{
+    display: block;
+    width:157px;
+    margin-left:140px;
+    margin-top:50px;
+}
+#content .calendar .tiaozhanfuben strong{
+    display: block;
+    width:200px;
+    margin-top:17px;
+    margin-left:25px;
+    font-size:13px;
+}
+
+#content .calendar .shouliezhan{
+    top:703px;
+    width:312px;
+    height:103px;
+    background: url("../images/index/index.png") -1079px -888px;
+}
+#content .calendar .shouliezhan span{
+    display: block;
+    width:170px;
+    margin: 40px 0 0 25px;
+}
+#content .calendar .shouliezhan:hover{
+    left:50px;
+}
+#content .calendar .jiejietupo{
+    left:13px;
+    top:796px;
+    width:305px;
+    height:94px;
+    background: url("../images/index/index.png") -913px -1193px;
+}
+#content .calendar .jiejietupo span{
+    display: block;
+    width:200px;
+    margin-left:105px;
+    margin-top:42px;
+}#content .calendar .jiejietupo:hover{
+     left:45px;
+ }
+
+#content .calendar .xuanshangfengyin{
+    top:885px;
+    width:312px;
+    height:103px;
+    background: url("../images/index/index.png") -595px -1193px;
+}
+#content .calendar .xuanshangfengyin span{
+    display: block;
+    width:170px;
+    margin: 55px 0 0 17px;
+}
+#content .calendar .xuanshangfengyin:hover{
+    left:50px;
+}
+/*扫码部分*/
+#content .saoma{
+    z-index: 5;
+    position: absolute;
+    top:46px;
+    left:50%;
+    margin-left:-143px;
+    width:375px;
+    height:105px;
+    background: #fccc00;
+    box-shadow: 0 0 7px 4px #feeb00 inset;
+    border-radius: 5px;
+    padding:10px;
+}
+#content .saoma .saomaShow.hide{
+    display: none;
+
+}
+#content .saoma .saomaShow a{
+    display: block;
+}
+#content .saoma .saomaShow .shouhui{
+    float: left;
+    width:22px;
+    height:22px;
+    background: url("../images/index/index.png") no-repeat -1452px -621px;
+    margin-right:5px;
+    cursor: pointer;
+}
+#content .saoma .saomaShow .xuanchuan{
+    float: left;
+    width:50px;
+    height:105px;
+    background: url("../images/index/index.png") no-repeat -1350px -614px;
+    margin-right:5px;
+}
+#content .saoma .saomaShow .erweicodeBg{
+    position: relative;
+    float: left;
+    width:105px;
+    height:105px;
+    background: #fff;
+    border-radius:10px;
+    margin-right:5px;
+}
+#content .saoma .saomaShow .erweicodeBg img{
+    display: block;
+    margin:auto;
+}
+#content .saoma .saomaShow .erweicodeBg img.code{
+    width:90px;
+    height:90px;
+    margin-top:7.5px;
+}
+#content .saoma .saomaShow .erweicodeBg img.line{
+    position: absolute;
+    top:7px;
+    left:2.5px;
+    width:100px;
+    height:10px;
+    animation:linemove 2s linear infinite;
+}
+@keyframes linemove {
+    0%{
+        top:7px;
+    }
+    100%{
+        top:90px;
+    }
+}
+
+#content .saoma .saomaShow .download{
+    float: left;
+    width:172px;
+    height:105px;
+}
+#content .saoma .saomaShow .download a{
+    display: block;
+    width:172px;
+    height:50px;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
+#content .saoma .saomaShow .download a.apple{
+    width:169px;
+    background-image: url(../images/index/index.png);
+    background-position: -760px -609px;
+    margin-bottom:3px;
+}
+#content .saoma .saomaShow .download a.android{
+    width:170px;
+    background-image: url(../images/index/index.png);
+    background-position: -907px -959px;
+}
+#content .saoma .saomaShow .download a:hover{
+    opacity:.8;
+}
+
+#content .saoma .xiaode{
+    width:25px;
+    height:105px;
+    background: url("../images/index/index.png") -1325px -614px;
+    margin-left:3px;
+    cursor: pointer;
+}
+#content .saoma .xiaode.hide{
+    display: none;
+}
+
+#content .arrow{
+    z-index: 6;
+    position: absolute;
+    top:60px;
+    left:50%;
+    margin-left: 242px;
+    width:0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-bottom:5px solid transparent;
+    border-left:5px solid #fccc00;
+}
+
+/*主要内容第一部分*/
+.MainContent  .banner1{
+    position: relative;
+    float: left;
+    width:360px;
+    height:270px;
+    margin-right:30px;
+    overflow: hidden;
+}
+.MainContent  .banner1 .tab{
+    position: absolute;
+    bottom:5px;
+    left:50%;
+    margin-left:-57px;
+}
+.MainContent  .banner1 .tab li{
+    float: left;
+    width:8px;
+    height:8px;
+    border:3px solid hotpink;
+    border-radius: 50%;
+    margin-right:5px;
+    cursor: pointer;
+}
+.MainContent  .banner1 .tab li.on{
+    background: hotpink;
+}
+.MainContent  .banner1 .ban1{
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:1000%;
+}
+.MainContent  .banner1 .ban1 li{
+    width:10%;
+    height:100%;
+    float: left;
+}
+.MainContent  .banner1 .ban1 li img{
+    width:100%;
+    height:100%;
+}
+.MainContent .news1{
+    float: left;
+    width:500px;
+    height:260px;
+}
+.MainContent .news1 ul.tit{
+    width:100%;
+    height:45px;
+    border-bottom:2px solid #000;
+}
+.MainContent .news1 ul.tit li{
+    position: relative;
+    float: left;
+    width:90px;
+    height:40px;
+    cursor: pointer;
+}
+.MainContent .news1 ul.tit li span{
+    position: absolute;
+    top:0;
+    left:15px;
+    display: block;
+    width:45px;
+    height:30px;
+    background: url("../images/index/index.png") -1400px -1152px;
+}
+.MainContent .news1 ul.tit li span.s2{
+    background: url("../images/index/index.png") -1400px -1031px;
+}
+.MainContent .news1 ul.tit li span.s3{
+    background: url("../images/index/index.png") -1400px -1092px;
+}
+.MainContent .news1 ul.tit li span.s4{
+    background: url("../images/index/index.png") -1400px -1122px;
+}
+.MainContent .news1 ul.tit li span.s5{
+    background: url("../images/index/index.png") -1400px -1061px;
+}
+.MainContent .news1 ul.tit i{
+    float: right;
+    width:20px;
+    height:30px;
+    background: url("../images/index/index.png") 100px -505px;
+}
+.MainContent .news1 ul.tit li em{
+    opacity:0;
+    position: absolute;
+    bottom:-10px;
+    left:0;
+    width:70px;
+    height: 35px;
+    background: #68d7fc;
+    border-radius: 20px;
+    transition: .5s;
+}
+.MainContent .news1 ul.tit li.on em{
+    opacity:1;
+    bottom:0;
+}
+.MainContent .news1 .news1Content{
+    position: relative;
+    width:100%;
+    height:220px;
+    border-top:1px solid #000;
+    margin-top:2px;
+    overflow: hidden;
+}
+.MainContent .news1 .news1Content .ListBox{
+    position: absolute;
+    top:0;
+    left:0;
+    width:1000%;
+    height:100%;
+}
+.MainContent .news1 .news1Content .ListBox .news1List{
+    float: left;
+    width:10%;
+    height:100%;
+}
+.MainContent .news1 .news1Content .ListBox .news1List li{
+    width:100%;
+    height:40px;
+    font:16px/40px "Malgun Gothic";
+    border-bottom:1px dashed #ccc;
+}
+.MainContent .news1 .news1Content .ListBox .news1List li p{
+    float: left;
+    width:400px;
+    height:40px;
+    white-space:nowrap;
+    overflow:hidden ;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.MainContent .news1 .news1Content .ListBox .news1List li span{
+    display: block;
+    float: right;
+    font:12px/40px "Microsoft yahei";
+    color: #89b8c2;;
+}
+
+/*
+*式神列表
+****/
+
+#content .shishenList{
+    position: absolute;
+    top:520px;
+    width:100%;
+    height:600px;
+    background: url("../images/index/shishenListBg.jpg") no-repeat center;
+}
+#content .shishenList .midd{
+    width:1400px;
+    height:430px;
+    margin:auto;
+}
+#content .shishenList .pingan{
+    position: absolute;
+    top:2px;
+    left:180px;
+    width:462px;
+    height:92px;
+}
+#content .shishenList .pingan p{
+    float: left;
+}
+#content .shishenList .pingan p.pinganList1{
+    width:130px;
+    height:70px;
+    background: url("../images/index/index.png") no-repeat -411px -587px;
+}
+#content .shishenList .pingan p.shenglue{
+    width:60px;
+    height:4px;
+    margin:34px 5px 0;
+    background: url("../images/index/index.png") no-repeat -1422px -153px;
+}
+#content .shishenList .pingan p.pinganList2{
+    position: relative;
+    width:96px;
+    height:92px;
+    cursor: pointer;
+}
+#content .shishenList .pingan p.pinganList2 span{
+    position: absolute;
+    top:20px;
+    left:15px;
+    width:70px;
+    height:33px;
+    background: url("../images/index/index.png") -1400px -865px;
+}
+#content .shishenList .pingan p.pinganList2 em,p.pinganList3 em{
+    opacity: 0;
+    position: absolute;
+    top:10px;
+    width:96px;
+    height:92px;
+    background: url("../images/index/index.png") -939px -1297px;
+    transition:.5s;
+}
+#content .shishenList .pingan p.pinganList2:hover em,p.pinganList3:hover em{
+    top:-5px;
+    opacity:1;
+}
+#content .shishenList .pingan p.pinganList2.on em,p.pinganList3.on em{
+    top:-5px;
+    opacity:1;
+}
+#content .shishenList .pingan p.pinganList3{
+    position: relative;
+    width:96px;
+    height:92px;
+    cursor: pointer;
+}
+#content .shishenList .pingan p.pinganList3 span{
+    position: absolute;
+    top:20px;
+    left:15px;
+    width:63px;
+    height:35px;
+    background: url("../images/index/index.png") -1479px -1441px;
+}
+
+#content .shishenList .midd .shishenBox{
+    position: relative;
+    width:810px;
+    height:340px;
+    margin-top:100px;
+    margin-left:80px;
+}
+#content .shishenList .midd .shishenBox div.shishen{
+    display: none;
+    opacity:0;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    transition: .2s;
+    overflow: hidden;
+}
+#content .shishenList .midd .shishenBox div.yinyangshi{
+    display: none;
+    opacity:0;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    transition: .2s;
+}
+#content .shishenList .midd .shishenBox div.yinyangshi.show{
+    display: block;
+    opacity:1;
+}
+#content .shishenList .midd .shishenBox div.shishen.show{
+    display: block;
+    opacity:1;
+}
+#content .shishenList .midd .shishenBox div.shishen p.tit{
+    width:100%;
+    height:50px;
+    border-bottom:1px dashed #ccc;
+    margin-top:40px;
+    font:18px/50px "Microsoft JhengHei UI Light";
+    font-weight:bold;
+    text-align: center;
+}
+#content .shishenList .midd .shishenBox div.shishen p.tit span{
+    float: left;
+    display: block;
+    width:50px;
+    margin-right:20px;
+    cursor: pointer;
+}
+#content .shishenList .midd .shishenBox div.shishen p.tit span.on{
+    color: #cea441;
+}
+#content .shishenList .midd .shishenBox div.shishen p.tit span:hover{
+    color: #cea441;
+}
+#content .shishenList .midd .shishenBox div.shishen p.tit span.t6{
+    width:131px;
+    height:29px;
+    background: url("../images/index/viewAll_btn.png");
+    margin-top:8px;
+}
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent{
+    position: relative;
+    width:809px;
+    height:225px;
+    margin:20px 0 0 0px;
+    overflow: hidden;
+    border-right:1px solid transparent;
+}
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent ul{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    width:1000%;
+    height:100%;
+}
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent ul.show{
+    display: block;
+}
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent ul li{
+    float: left;
+    width:134px;
+    height:205px;
+    border-right:1px solid #ccc;
+}
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent ul li p{
+    position: relative;
+    width:88px;
+    height:88px;
+    background: url("../images/index/index.png") -1218px -1192px;
+    border-radius: 50%;
+    margin:10px auto 0;
+    cursor: pointer;
+}
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent ul li p img{
+    display: block;
+    width:100%;
+    height:100%;
+}
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent ul li p span{
+    position: absolute;
+    z-index: 1;
+    right:0;
+    top:0;
+    width:31px;
+    height:36px;
+    background: url("../images/index/new.png") ;
+}
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent ul li p i{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.7);
+    border-radius: 50%;
+    opacity: 0;
+    transition:.5s;
+}
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent ul li p i em{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:16px;
+    margin:auto;
+    font:16px/16px "Microsoft JhengHei UI";
+    color: #fff;
+    transform: translate(-50%,-50%);
+}
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent ul li p:hover i{
+    opacity:1;
+}
+
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent .tab{
+    display: none;
+    position: absolute;
+    top:50%;
+    margin-top:-25px;
+    width:42px;
+    height:33px;
+    cursor: pointer;
+}#content .shishenList .midd .shishenBox div.shishen div.shishenContent .tab.show{
+     display: block;
+ }
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent .tab.left {
+    background: url("../images/index/index.png") -1400px -832px;
+    left:0;
+}
+#content .shishenList .midd .shishenBox div.shishen div.shishenContent .tab.right {
+    background: url("../images/index/index.png") -1400px -931px;
+    right:0;
+}
+
+#content .shishenList .midd .shishenBox .yinyangshi .leftList{
+    float: left;
+    width:150px;
+    height:220px;
+    margin-top:60px;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .leftList .lls{
+    position: relative;
+    width:136px;
+    height:36px;
+    border:2px solid #fff;
+    margin-bottom:20px;
+    font:18px/36px "Microsoft JhengHei UI Light";
+    text-align: center;
+    font-weight:bold;
+    cursor: pointer;
+    transition: .3s;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .leftList .lls:hover{
+    border:2px solid #000;
+    background: #fff;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .leftList .lls:hover em{
+    opacity:1;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .leftList .lls.on{
+    border:2px solid #000;
+    background: #fff;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .leftList .lls.on em{
+    opacity:1;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .leftList .lls em{
+    position: absolute;
+    opacity:0;
+    right:-15px;
+    top:12px;
+    width:0;
+    height:0;
+    border: 5px solid transparent;
+    border-left-color: #000;
+    transition: .3s;
+}
+
+#content .shishenList .midd .shishenBox .yinyangshi .rightList{
+    float: right;
+    width:620px;
+    height:100%;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li{
+    display: none;
+    opacity:0;
+    width:100%;
+    height:100%;
+    transition:opacity .3s;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li.on{
+    display: block;
+    opacity:1;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li img{
+    float: left;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li div.detailMassage{
+    position: relative;
+    float: right;
+    width:230px;
+    height:235px;
+    margin-top:75px;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li div.detailMassage span.tit{
+    display: block;
+    width:33px;
+    height:23px;
+    margin-bottom:10px;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li div.detailMassage span.t1{
+    background: url("../images/index/index.png") -1437px -1205px;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li div.detailMassage span.t2{
+    width:37px;
+    background: url("../images/index/index.png") -1400px -1182px;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li div.detailMassage span.t3{
+    width:39px;
+    background: url("../images/index/index.png") -1437px -1182px;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li div.detailMassage span.t4{
+    width:37px;
+    background: url("../images/index/index.png") -1400px -1205px;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li div.detailMassage h1{
+    display: block;
+    width:100%;
+    border-bottom:2px solid #000;
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li div.detailMassage p.yinyangshiMassage{
+    width:100%;
+    height:100px;
+    border-top:1px solid #000;
+    margin-top:2px;
+    padding:10px 0;
+    font:16px/18px "Microsoft JhengHei UI Light";
+}
+#content .shishenList .midd .shishenBox .yinyangshi .rightList li div.detailMassage em{
+    position: absolute;
+    left:0;
+    bottom:0;
+    width:53px;
+    height:42px;
+    background: url("../images/index/index.png") -1402px -671px;
+    cursor: pointer;
+}
+/*
+*攻略部分！！！！！！！！
+****/
+#content .gongluePos{
+    position: absolute;
+    top:1060px;
+    width:100%;
+    height:508px;
+}
+#content .gongluePos .gonglue{
+    width:1190px;
+    height:100%;
+    margin:auto;
+}
+#content .gongluePos .gonglue .wenti{
+    float: left;
+    width:375px;
+    height:100%;
+}
+#content .gongluePos .gonglue .wenti .wentiTop{
+    width:100%;
+    height:58px;
+    margin-bottom:10px;
+}
+#content .gongluePos .gonglue .wenti .input{
+    float: left;
+    width:314px;
+    height:40px;
+    border:2px solid #000;
+    border-right:none;
+    outline:none;
+    font:16px/44px "Microsoft yahei";
+    text-indent:10px;
+    margin-top:12px;
+}
+#content .gongluePos .gonglue .wenti .search{
+    float: left;
+    width:59px;
+    height:58px;
+    background: url("../images/index/index.png") -1400px -563px;
+    cursor: pointer;
+}
+#content .gongluePos .gonglue .wenti .search:hover{
+    background: url("../images/index/index.png") -1400px -505px;
+}
+#content .gongluePos .gonglue .wenti .wentiBot{
+    position: relative;
+    width:371px;
+    height:436px;
+    border:2px solid #000;
+}
+#content .gongluePos .gonglue .wenti .wentiBot .wentiBanner{
+    position: relative;
+    width:100%;
+    height:230px;
+    overflow: hidden;
+}
+#content .gongluePos .gonglue .wenti .wentiBot .wentiBanner ul.wentiBan{
+    position: absolute;
+    left:0;
+    top:0;
+    width:1000%;
+    height:100%;
+}
+#content .gongluePos .gonglue .wenti .wentiBot .wentiBanner ul.wentiBan li{
+    float: left;
+    width:10%;
+    height:100%;
+}
+#content .gongluePos .gonglue .wenti .wentiBot .wentiBanner ul.wentiBan li img{
+    width:100%;
+    height:100%;
+}
+#content .gongluePos .gonglue .wenti .wentiBot  ul.wentiTab{
+    position: absolute;
+    top:250px;
+    left:50%;
+    margin-left:-21px;
+}
+#content .gongluePos .gonglue .wenti .wentiBot  ul.wentiTab li{
+    float: left;
+    width:10px;
+    height:10px;
+    border:3px solid #000;
+    border-radius: 50%;
+    margin-right:5px;
+    cursor: pointer;
+    transition: .5s;
+}
+#content .gongluePos .gonglue .wenti .wentiBot  ul.wentiTab li.on{
+    background: #000;
+}
+#content .gongluePos .gonglue .wenti .wentiBot  ul.wentiTab li:hover{
+    background: #000;
+}
+#content .gongluePos .gonglue .wenti .wentiList{
+    width:100%;
+    height:150px;
+    margin-top:50px;
+}
+#content .gongluePos .gonglue .wenti .wentiList li.wl{
+    position: relative;
+    float: left;
+    width:90px;
+    height:100%;
+}
+#content .gongluePos .gonglue .wenti .wentiList li.wl span{
+    position: absolute;
+    width:25px;
+    height:140px;
+    left:50%;
+    margin-left: -12.5px;
+    transition:margin-top .5s;
+    cursor: pointer;
+}
+#content .gongluePos .gonglue .wenti .wentiList li.wl span.s1{
+    background: url("../images/index/index.png") -1344px -315px;
+}
+#content .gongluePos .gonglue .wenti .wentiList li.wl span.s2{
+    background: url("../images/index/index.png") -1307px -467px;
+}
+#content .gongluePos .gonglue .wenti .wentiList li.wl span.s3{
+    background: url("../images/index/index.png") -1320px -315px;
+}
+#content .gongluePos .gonglue .wenti .wentiList li.wl span.s4{
+    background: url("../images/index/index.png") -1368px -315px;
+}
+#content .gongluePos .gonglue .wenti .wentiList li.wl span:hover{
+    margin-top:-15px;
+}
+#content .gongluePos .gonglue .wenti .wentiList li.wl em{
+    position: absolute;
+    right:0;
+    width:10px;
+    height:100%;
+    background: url("../images/index/index.png") -1296px -315px;
+}
+
+#content .gongluePos .gonglue .gonglueMassage{
+    float: right;
+    width:790px;
+    height:430px;
+    margin-top:78px;
+}
+#content .gongluePos .gonglue .gonglueMassage .gltit{
+    width: 790px;
+    height:92px;
+    padding-bottom:20px;
+    border-bottom:1px solid #ccc;
+}
+#content .gongluePos .gonglue .gonglueMassage .gltit i{
+    display: block;
+    float: left;
+    width: 45px;
+    height:4px;
+    background:url("../images/index/index.png") -1422px -153px;
+    margin:50px 8px 0;
+}
+#content .gongluePos .gonglue .gonglueMassage .gltit li{
+    position: relative;
+    float: left;
+    width:96px;
+    height:92px;
+    cursor: pointer;
+}
+#content .gongluePos .gonglue .gonglueMassage .gltit li.glhead{
+    width:134px;
+    background: url("../images/index/index.png") -1035px -1296px;
+    left:-15px;
+}
+#content .gongluePos .gonglue .gonglueMassage .gltit li.gll em{
+    opacity:0;
+    top:10px;
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: url("../images/index/index.png") -939px -1297px;
+    transition: .5s;
+}
+#content .gongluePos .gonglue .gonglueMassage .gltit li.gll.on em{
+    opacity:1;
+    top:0px;
+}
+#content .gongluePos .gonglue .gonglueMassage .gltit li.gll span{
+    position: absolute;
+    bottom:30px;
+    left:50%;
+    margin-left:-35px;
+    width:70px;
+    height:40px;
+}
+#content .gongluePos .gonglue .gonglueMassage .gltit li.g1 span{
+    background: url("../images/index/index.png") -1400px -754px;
+}
+#content .gongluePos .gonglue .gonglueMassage .gltit li.g2 span{
+    height:32px;
+    background: url("../images/index/index.png") -1400px -997px;
+}
+#content .gongluePos .gonglue .gonglueMassage .gltit li.g3 span{
+    width:74px;
+    height:36px;
+    background: url("../images/index/index.png") -1400px -794px;
+}
+#content .gongluePos .gonglue .gonglueMassage .gltit li.g4 span{
+    width: 80px;
+    height:32px;
+    background: url("../images/index/index.png") -1239px -993px;
+}
+
+#content .gongluePos .gonglue .gonglueMassage .glContent{
+    position: relative;
+    width:111%;
+    height:300px;
+    margin-top:20px;
+    overflow: hidden;
+}
+#content .gongluePos .gonglue .gonglueMassage .glContent .glMoveBox{
+    position: absolute;
+    top:0;
+    left:0;
+    width:1000%;
+    height:100%;
+}
+#content .gongluePos .gonglue .gonglueMassage .glContent .glMoveBox li{
+    float: left;
+    width:10%;
+    height:100%;
+    overflow: hidden;
+}
+#content .gongluePos .gonglue .gonglueMassage .glContent .glMoveBox li p{
+    position: relative;
+    float: left;
+    width:355px;
+    height:45px;
+    margin-right:80px;
+    margin-top:13px;
+    border-bottom:1px dashed #ccc;
+}
+#content .gongluePos .gonglue .gonglueMassage .glContent .glMoveBox li p strong{
+    position: absolute;
+    left:0;
+    top: 6px;
+    width:0;
+    height:0;
+    border:5px solid transparent;
+    border-left-color: #000;
+}
+#content .gongluePos .gonglue .gonglueMassage .glContent .glMoveBox li p span{
+    display: block;
+    width:100%;
+    font:14px/20px "Microsoft YaHei UI";
+    text-indent: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#content .gongluePos .gonglue .gonglueMassage .glContent .glMoveBox li p i{
+    position: absolute;
+    width:100%;
+    bottom:0;
+    text-indent:22px;
+    font-style: normal;
+    color: darkgray;
+}
+
+
+/*同人专区*/
+#content .tongrenPos{
+    position: absolute;
+    top:1620px;
+    width:100%;
+    height:545px;
+}
+#content .tongrenPos .tongren{
+    width:1200px;
+    height:100%;
+    margin:auto;
+}
+#content .tongrenPos .tongren .tit{
+    width:100%;
+    height:106px;
+}
+#content .tongrenPos .tongren .tit .mainTit{
+    float: left;
+    width:112px;
+    height:100%;
+    background: url("../images/index/index.png") -928px -666px;
+    margin-right:15px;
+}
+#content .tongrenPos .tongren .tit .overflow{
+    position: relative;
+    float: left;
+    width:1060px;
+    height:92px;
+    overflow: hidden;
+}
+#content .tongrenPos .tongren .tit .fuTit{
+    float: left;
+    width:1060px;
+    height:90px;
+    border-bottom:2px solid #000;
+
+}
+#content .tongrenPos .tongren .tit .fuTit li{
+    position: relative;
+    float: left;
+    width:155px;
+    height:60px;
+    border-right: 1px dashed #ccc;
+    cursor: pointer;
+}
+#content .tongrenPos .tongren .tit .fuTit li:last-of-type{
+    border-right: none;
+}
+#content .tongrenPos .tongren .tit .fuTit li span{
+    position: absolute;
+    top:20px;
+    width:100%;
+    text-align: center;
+    font:18px/20px "Microsoft yahei";
+    font-weight:bold;
+}
+#content .tongrenPos .tongren .tit .fuTit li.on span{
+    top:0;
+}
+#content .tongrenPos .tongren .tit .fuTit li em{
+    position: absolute;
+    bottom:-32px;
+    left:50%;
+    margin-left:-30px;
+    width:70px;
+    height:53px;
+    transition: .5s;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f1 em{
+    bottom:-85px;
+    background: url("../images/index/fan/icons.png") -50px 0;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f1.on em{
+    bottom:-32px;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f2 em{
+    bottom:-85px;
+    background: url("../images/index/fan/icons.png") -213px 0;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f2.on em{
+    bottom:-32px;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f3 em{
+    bottom:-85px;
+    background: url("../images/index/fan/icons.png") -365px 0;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f3.on em{
+    bottom:-32px;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f4 em{
+    bottom:-85px;
+    background: url("../images/index/fan/icons.png") -524px 0;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f4.on em{
+    bottom:-32px;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f5 em{
+    bottom:-85px;
+    background: url("../images/index/fan/icons.png") -673px 0;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f5.on em{
+    margin-left:-32px;
+    bottom:-32px;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f6 em{
+    bottom:-85px;
+    background: url("../images/index/fan/icons.png") -969px 0;
+}
+#content .tongrenPos .tongren .tit .fuTit li.f6.on em{
+    margin-left:-31px;
+    bottom:-32px;
+}
+#content .tongrenPos .tongren .tit .pushWork{
+    position: absolute;
+    right:10px;
+    top:25px;
+    width:100px;
+    height:25px;
+    background: url("../images/index/index.png") -930px -608px;
+    transition: .5s;
+}
+#content .tongrenPos .tongren .tit .pushWork:hover{
+    right:0;
+}
+
+#content .tongrenPos .tongren .trShow{
+    position: relative;
+    width:1220px;
+    height:418px;
+    margin-top:30px;
+    overflow: hidden;
+}
+#content .tongrenPos .tongren .trShow .trMoveBox{
+    position: absolute;
+    left:0;
+    top:0;
+    width:1000%;
+    height:100%;
+}
+#content .tongrenPos .tongren .trShow .trMoveBox li.trBox{
+    float: left;
+    width:10%;
+    height:100%;
+}
+#content .tongrenPos .tongren .trShow .trMoveBox li.trBox strong{
+    float: left;
+    width:285px;
+    height:200px;
+    overflow: hidden;
+    margin:10px;
+}
+#content .tongrenPos .tongren .trShow .trMoveBox li.trBox strong a{
+    position: relative;
+    display: block;
+    width:285px;
+    height:163px;
+}
+#content .tongrenPos .tongren .trShow .trMoveBox li.trBox strong a img{
+    display: block;
+    width:100%;
+    height:100%;
+}
+#content .tongrenPos .tongren .trShow .trMoveBox li.trBox strong a span{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.4);
+    transition: .5s;
+}
+#content .tongrenPos .tongren .trShow .trMoveBox li.trBox strong a em{
+    position: absolute;
+    opacity:0;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:79px;
+    height:93px;
+    margin:auto;
+    background: url("../images/index/index.png") -679px -474px;
+    transition: .5s;
+}
+#content .tongrenPos .tongren .trShow .trMoveBox li.trBox strong a:hover span,#content .tongrenPos .tongren .trShow .trMoveBox li.trBox strong a:hover em{
+    opacity:1;
+}
+
+#content .tongrenPos .tongren .trShow .trMoveBox li.trBox strong p{
+    width:100%;
+    font:14px/35px "Microsoft JhengHei UI Light";
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*阴阳师-视频*/
+#content .yinyangVideo{
+    position: absolute;
+    top:2240px;
+    width:100%;
+    height:514px;
+    background: url("../images/index/video/bg.jpg");
+}
+#content .yinyangVideo .videoContent{
+    width:1200px;
+    height:450px;
+    margin:55px auto 0;
+}
+#content .yinyangVideo .videoContent .videoLeft{
+    float: left;
+    width:580px;
+    height:430px;
+}
+#content .yinyangVideo .videoContent .videoLeft .vl1,#content .yinyangVideo .videoContent .videoRight .vl1{
+    float: left;
+    width:230px;
+    height:149px;
+    margin-right:60px;
+    margin-bottom:66px;
+    cursor: pointer;
+}
+#content .yinyangVideo .videoContent .videoLeft .vl1 em{
+    float: left;
+    width:155px;
+    height:82px;
+    background: url("../images/index/index.png") -1080px -487px;
+    margin-top:20px;
+}
+#content .yinyangVideo .videoContent .videoLeft .vl1 span,#content .yinyangVideo .videoContent .videoRight .vl1 span{
+    float: right;
+    width:10px;
+    height:100%;
+    background: url("../images/index/index.png") -1318px -613px;
+}
+#content .yinyangVideo .videoContent .videoLeft .vll,#content .yinyangVideo .videoContent .videoRight .vll{
+    float: left;
+    width:270px;
+    height:200px;
+    margin-right:20px;
+    margin-bottom:15px;
+    cursor: pointer;
+}
+#content .yinyangVideo .videoContent .videoLeft .vll .showImg,#content .yinyangVideo .videoContent .videoRight .vll .showImg{
+    display: block;
+    width: 270px;
+    height:154px;
+    overflow: hidden;
+}
+#content .yinyangVideo .videoContent .videoLeft .vll .showImg img,#content .yinyangVideo .videoContent .videoRight .vll .showImg img{
+    display: block;
+    width:100%;
+    height:100%;
+    transition: .5s;
+}
+#content .yinyangVideo .videoContent .videoLeft .vll .showImg img:hover,#content .yinyangVideo .videoContent .videoRight .vll .showImg img:hover{
+    transform: scale(1.2);
+}
+#content .yinyangVideo .videoContent .videoLeft .vll .describe{
+    display: block;
+    width:100%;
+    height:46px;
+    background: #fff;
+    font:14px/46px "Microsoft yahei";
+    text-indent:20px;
+}
+
+#content .yinyangVideo .videoContent .videoRight{
+    float: right;
+    width:580px;
+    height:430px;
+}
+#content .yinyangVideo .videoContent .videoRight .vl1 em{
+    float: left;
+    width:155px;
+    height:92px;
+    background: url("../images/index/index.png") -1106px -624px;
+    margin-top:20px;
+}
+#content .yinyangVideo .videoContent .videoRight .vll .describe{
+    display: block;
+    width:100%;
+    height:46px;
+    font:14px/46px "Microsoft yahei";
+    text-indent:20px;
+    color: gray;
+}
+
+/*活动专区*/
+#content .activitiesPos{
+    position: absolute;
+    top:2810px;
+    width:100%;
+    height:375px;
+}
+#content .activitiesPos .activities{
+    width:1270px;
+    height:375px;
+    margin:auto;
+}
+#content .activitiesPos .activities .actLeft{
+    float: left;
+    width:260px;
+    height:370px;
+    margin-right:50px;
+    background: url("../images/index/act/act1.png");
+}
+#content .activitiesPos .activities .actRight{
+    float: right;
+    width:950px;
+    height:345px;
+}
+#content .activitiesPos .activities .actRight li{
+    position: relative;
+    float: left;
+    width:270px;
+    height:153px;
+    margin:0 25px 15px 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+#content .activitiesPos .activities .actRight li img{
+    display: block;
+    width:100%;
+    height:100%;
+    transition: .5s;
+}
+#content .activitiesPos .activities .actRight li img:hover{
+    transform: scale(1.2);
+}
+#content .activitiesPos .activities .actRight li p{
+    position: absolute;
+    bottom:10px;
+    left:10px;
+    border:1px solid #fff;
+    padding:10px;
+    font:14px/15px "Microsoft JhengHei UI Light";
+    color: #fff;
+}
+
+
+/*扫码专区*/
+#content .codePos{
+    position: absolute;
+    width:100%;
+    height:280px;
+    top:3230px;
+}
+#content .codePos .codeAre{
+    width:1200px;
+    height:280px;
+    margin:auto;
+}
+#content .codePos .codeAre .yinyangLogo{
+    float: left;
+    width:70px;
+    height:199px;
+    background: url("../images/index/hLogo.png");
+    margin-right:100px;
+    cursor: pointer;
+}
+#content .codePos .codeAre .codeBox{
+    float: left;
+}
+#content .codePos .codeAre .codeBox li{
+    position: relative;
+    float: left;
+    width:230px;
+    height:170px;
+    background: #f6f6f6;
+    margin-right:100px;
+    padding: 15px 20px;
+}
+#content .codePos .codeAre .codeBox li .pp{
+    float: left;
+    width:27px;
+    font:16px/16px "Microsoft yahei";
+}
+#content .codePos .codeAre .codeBox li .p3{
+    display: block;
+    float: left;
+    width:24px;
+    height:96px;
+    background: url("../images/index/index.png") -1359px -762px;
+}
+#content .codePos .codeAre .codeBox li .p3.jj{
+    display: block;
+    float: left;
+    width:24px;
+    height:104px;
+    background: url("../images/index/index.png") -1307px -497px;
+}
+#content .codePos .codeAre .codeBox li i{
+    display: block;
+    margin-top:150px;
+    width:50px;
+    height:2px;
+    background: #d1d1d1;
+}
+#content .codePos .codeAre .codeBox li .p4{
+    font:14px/30px "Microsoft yahei";
+}
+#content .codePos .codeAre .codeBox li .p4 span{
+    color: #d2c199;
+}
+#content .codePos .codeAre .codeBox li .codeShow{
+    position: absolute;
+    right:-30px;
+    top:-30px;
+    width:132px;
+    height:132px;
+    padding:16px;
+    background: #fff;
+    border:1px solid #ccc;
+}
+#content .codePos .codeAre .codeBox li .codeShow img{
+    display: block;
+    width:132px;
+    height:132px;
+}
+#content .codePos .codeAre .kefu{
+    float: left;
+    width:225px;
+    height:200px;
+}
+#content .codePos .codeAre .kefu .k1{
+    display: block;
+    width:111px;
+    height:109px;
+    background: url("../images/index/index.png") -570px -474px;
+    margin-bottom:20px;
+}
+#content .codePos .codeAre .kefu span{
+    display: block;
+}
+#content .codePos .codeAre .kefu .tel{
+    font:20px/25px "Georgia";
+}
+#content .codePos .codeAre .kefu .line{
+    width:50px;
+    height:2px;
+    background: #d1d1d1;
+    margin-top:10px;
+}
+#content .codePos .codeAre .kefu .fankuiwenti a{
+    font-size:12px;
+    color: #dbbe7c;
+}
+#content .codePos .codeAre .returnTop{
+    float: right;
+    width:25px;
+    height:111px;
+    background: url("../images/index/index.png") -1355px -466px;
+    margin-top:50px;
+    cursor: pointer;
+    transition: .5s;
+}
+#content .codePos .codeAre .returnTop:hover{
+    margin-top:35px;
+}
+
+/*底部foot*/
+#content .footer{
+    position: absolute;
+    top:3500px;
+    width:100%;
+    height:524px;
+    background: url("../images/index/footbg.jpg") no-repeat center;
+}
+#content .footer .footTit{
+    width:591px;
+    height:29px;
+    background: url("../images/index/index.png") -661px -1149px;
+    margin:100px auto 50px;
+}
+#content .footer .Fhover{
+    width:330px;
+    height:380px;
+    margin:auto;
+}
+#content .footer .ft1{
+    width:88px;
+    height:26px;
+    font:22px/30px "Microsoft JhengHei UI Light";
+    margin:auto;
+    opacity:1;
+    transition: .5s;
+}
+#content .footer .ftchange{
+    position: relative;
+    width:152px;
+    height:152px;
+    margin:20px auto 0;
+    cursor: pointer;
+    transition: .5s;
+}
+#content .footer .ftchange .zhen{
+    position: absolute;
+    top:0;
+    left:50%;
+    margin-left:-12px;
+    width:22px;
+    height:76px;
+    background: url("../images/index/index.png")  -1400px -81px;
+    transition: .5s;
+}
+#content .footer .ftchange .downcode{
+    position: absolute;
+    top:15px;
+    left:0;
+    width:200px;
+    height:152px;
+    cursor: pointer;
+    opacity:0;
+    transition: .5s;
+}
+#content .footer .ftchange .downcode img{
+    float: left;
+    width:152px;
+    height:152px;
+    box-shadow:0 0 30px #7f9992;
+}
+#content .footer .ftchange .downcode span{
+    display: block;
+    float: right;
+    width:16px;
+    height:100%;
+    font:16px/19px "Microsoft JhengHei UI Light";
+    font-weight:bold;
+}
+
+
+#content .footer .paifang{
+    position: absolute;
+    bottom:0;
+    left:50%;
+    margin-left: -88px;
+    width:213px;
+    height:180px;
+    background: url("../images/index/index.png") -354px -363px;
+    transition: .5s;
+}
+
+#content .footer .Fhover:hover .ftchange .zhen{
+    top:-70px;
+}
+#content .footer .Fhover:hover .ftchange .downcode{
+    top:-20px;
+    opacity:1;
+}
+#content .footer .Fhover:hover .ft1{
+    opacity:0;
+}
+#content .footer .Fhover:hover .paifang{
+    bottom:-50px;
+}

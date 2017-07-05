@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Taoist">
+    <title>阴阳师官网</title>
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jqery-3.2.1.js"></script>
+    <script src="js/newData.js"></script>
+    <script src="js/shishenData.js"></script>
+    <script src="js/strateData.js"></script>
+</head>
+<body>
+    <!--Header-->
+    <div id="header">
+        <!--导航-->
+        <div id="nav">
+            <!--导航-->
+            <ul class="mainList">
+                <li class="mNav"><a href="index.html">官网首页</a></li>
+                <li class="line"></li>
+                <li class="mNav"><a href="">新闻资讯</a></li>
+                <li class="line"></li>
+                <li class="mNav"><a href="">游戏攻略</a></li>
+                <li class="line"></li>
+                <li class="mNav"><a href="">游戏特色</a></li>
+                <li class="line"></li>
+                <li class="mNav mBtn">
+                    <a href="">同人专区</a>
+                    <div class="trangle"></div>
+                </li>
+                <li class="line"></li>
+                <li class="mNav mBtn">
+                    <a href="">官方渠道</a>
+                    <div class="trangle"></div>
+                </li>
+            </ul>
+            <!--下拉隐藏层-->
+            <ul class="hide">
+                <li class="tongren">
+                    <a href="#" class="hideList">
+                        <div class="hideImg hideImg1"></div>
+                        <p>同人cos</p>
+                    </a>
+                    <span class="line"></span>
+                    <a href="#" class="hideList">
+                        <div class="hideImg hideImg2"></div>
+                        <p>同人手绘</p>
+                    </a>
+                </li>
+                <li class="qudao">
+                    <a href="" class="hideList">
+                        <div class="hideImg hideImg3"></div>
+                        <p>官方微信</p>
+                    </a>
+                    <span class="line"></span>
+                    <a href="" class="hideList">
+                        <div class="hideImg hideImg4"></div>
+                        <p>官方微博</p>
+                    </a>
+                    <span class="line"></span>
+                    <a href="" class="hideList">
+                        <div class="hideImg hideImg5"></div>
+                        <p>百度贴吧</p>
+                    </a>
+                    <span class="line"></span>
+                    <a href="" class="hideList">
+                        <div class="hideImg hideImg6"></div>
+                        <p>官方论坛</p>
+                    </a>
+                </li>
+            </ul>
+            <!--logo&&二维码-->
+            <div class="navLogo">
+                <div class="ercode">
+                    <p>扫码下载</p>
+                    <img src="images/2code.png" alt="">
+                </div>
+                <div class="logo">
+                    <p class="logoImg"></p>
+                    <p class="logoTxt1">阴阳师</p>
+                    <p class="logoTxt2">网易和风匠心巨制</p>
+                </div>
+            </div>
+        </div>
+        <!--logo-->
+        <div id="hLogo"></div>
+        <!--角色-->
+        <div id="role">
+            <div class="rol rol1">
+                <p class="man man1 hide"></p>
+                <p class="man man2 hide"></p>
+            </div>
+            <div class="rol rol2">
+                <p class="man man3 hide"></p>
+                <p class="man man4 hide"></p>
+            </div>
+            <p class="cover" onselector="return false"></p>
+            <p class="rolBtn"></p>
+            <!--山兔GIF-->
+            <p class="serveImg"></p>
+        </div>
+        <!--服务器列表-->
+        <div id="serve" class="hide">
+            <div class="sBg hide">
+                <div class="sBox">
+                    <div class="serveArea">
+                        <p class="sTit">中国区-ios</p>
+                        <div class="sArea">
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">桂之馥</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">莲之净</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">雀之羽</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">春之樱</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">夏之蝉</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">夜之月</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">竹之幽</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">松之苍</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">兰之雅</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="serveArea">
+                        <p class="sTit">网易-双平台</p>
+                        <div class="sArea">
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">桂之馥</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">莲之净</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">雀之羽</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">春之樱</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">夏之蝉</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">夜之月</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">竹之幽</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">松之苍</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">兰之雅</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="serveArea">
+                        <p class="sTit">中国-安卓联运</p>
+                        <div class="sArea">
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">桂之馥</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">莲之净</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">雀之羽</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">春之樱</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">夏之蝉</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">夜之月</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">竹之幽</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">松之苍</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">兰之雅</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="serveArea sLast">
+                        <p class="sTit">联运-双平台</p>
+                        <div class="sArea">
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">桂之馥</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">莲之净</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">雀之羽</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">春之樱</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">夏之蝉</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">夜之月</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">竹之幽</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">松之苍</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">兰之雅</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                            <div class="sList">
+                                <p class="sLImg"></p>
+                                <p class="sLName">云之遏</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sBand">
+                        <div class="sBandImg1"></div>
+                        <p class="sBandBtn">公平运营声明</p>
+                        <div class="sBandImg2"></div>
+                    </div>
+                </div>
+                <p class="btnClose"></p>
+            </div>
+        </div>
+    </div>
+
+    <!--content-->
+    <div id="content">
+        <!--日历-->
+        <div class="calendar">
+            <p class="caleTit"></p>
+            <p class="xuanshangfengyin">
+                <span>每日5点和18点重置</span>
+            </p>
+            <p class="jiejietupo">
+                <span>个人每周一6点重置，阴阳寮每日5点重置，周六日奖励翻倍</span>
+            </p>
+            <p class="shouliezhan">
+                <span>周一至周四鬼王，周五-周日阴界之门，时间19-21点</span>
+            </p>
+            <p class="tiaozhanfuben hover">
+                <span>副本秘闻 御灵之境</span>
+            </p>
+            <p class="yuhunfuben hover">
+                <span>【周一】雪幽魂、地藏像、鸣屋、网切</span>
+                <strong style="margin-top:25px;">【周一】雪幽魂、地藏像、鸣屋、网切</strong>
+                <strong>【周二】涅槃之火、三味、招财猫、狰</strong>
+                <strong>【周三】 魍魉之匣、被服、阴摩罗、魅妖</strong>
+                <strong>【周四】反枕、心眼、树妖、针女</strong>
+                <strong>【周五】日女巳时、镜姬、钟灵、破势</strong>
+                <strong>【周六】随机掉落全部御魂</strong>
+                <strong>【周日】随机掉落全部御魂</strong>
+            </p>
+            <p class="shishenweipai hover">
+                <span>委派式神完成对应任务，即可获得奖励</span>
+                <strong>任务在未接受一段时间后，会自动刷新； 可接受的任务随阴阳师等级提升， 30级以上开放3个，50级以上开放4个。</strong>
+            </p>
+            <p class="jijiezhijing hover">
+                <span>开启时间:每日11:00-12:00,20:00-21:00</span>
+                <strong>全部正式服≥15级的玩家（除抢先体验服） 均可参与集结之境跨服斗技修习模式。</strong>
+            </p>
+            <p class="tiaozhanBoss hover">
+                <span>年兽BOSS、石距BOSS、逢魔之时</span>
+                <strong>年兽BOSS：通关探索副本概率开启，CD12小时   </strong>
+                <strong>石距BOSS：妖气封印发现，CD1小时 逢魔之时-稀有BOSS土蜘蛛</strong>
+                <strong>町中→逢魔之时，发现稀有BOSS土蜘蛛之后即可参与挑战，同时土蜘蛛还可邀请好友、寮友、附近玩家进行挑战。</strong>
+                <strong>每天只能挑战1只，在每日17:00-20:00可发现新事件，每天20:00之后将无法继续发现新事件，已经触发的事件仍可以继续参与。<font color="#f95c19">21:00活动结束。</font></strong>
+            </p>
+            <p class="douji hover">
+                <span>协同斗技，每周六日14:00-15:30斗技</span>
+                <strong>周一至周五:11:00-13:00,20:00-22:00   周六周日:10:00-13:00,20:00-23:00</strong>
+            </p>
+        </div>
+        <div class="saoma">
+            <div class="saomaShow">
+                <p class="shouhui"></p>
+                <p class="xuanchuan"></p>
+                <div class="erweicodeBg">
+                    <img src="images/2code.png" class="code" alt="">
+                    <img src="images/line.png" class="line" alt="">
+                </div>
+                <div class="download">
+                    <a href="https://adl.netease.com/d/g/yys/c/gw?type=ios" class="apple"></a>
+                    <a href="https://adl.netease.com/d/g/yys/c/gw?type=android" class="android"></a>
+                </div>
+            </div>
+            <div class="xiaode hide"></div>
+        </div>
+        <i class="arrow"></i>
+        <!--主要内容：新闻+banner-->
+        <div class="MainContent">
+            <div class="banner1">
+                <ul class="ban1">
+                    <li><img src="images/index/Ban1/1.jpg" alt=""></li>
+                    <li><img src="images/index/Ban1/2.jpg" alt=""></li>
+                    <li><img src="images/index/Ban1/3.jpg" alt=""></li>
+                    <li><img src="images/index/Ban1/4.jpg" alt=""></li>
+                    <li><img src="images/index/Ban1/5.jpg" alt=""></li>
+                    <li><img src="images/index/Ban1/6.jpg" alt=""></li>
+                </ul>
+                <ul class="tab">
+                    <li class="on"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="news1">
+                <ul class="tit">
+                    <li class="on"><em></em><span class="s1"></span><i></i></li>
+                    <li><em></em><span class="s2"></span><i></i></li>
+                    <li><em></em><span class="s3"></span><i></i></li>
+                    <li><em></em><span class="s4"></span><i></i></li>
+                    <li><em></em><span class="s5"></span></li>
+                </ul>
+                <div class="news1Content">
+                    <div class="ListBox">
+                        <ul class="news1List">
+                            <!--<li>-->
+                                <!--<p><a href="">-【新闻】 浮妖百态式神设计大赛获奖作品公布</a></p>-->
+                                <!--<span>2017-06-23</span>-->
+                            <!--</li>-->
+                        </ul>
+                        <ul class="news1List"></ul>
+                        <ul class="news1List"></ul>
+                        <ul class="news1List"></ul>
+                        <ul class="news1List"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--式神列表-->
+        <div class="shishenList">
+            <div class="midd">
+                <div class="pingan">
+                    <p class="pinganList1"></p>
+                    <p class="shenglue"></p>
+                    <p class="pinganList2 Boxqiehuan on">
+                        <em></em>
+                        <span></span>
+                    </p>
+                    <p class="shenglue"></p>
+                    <p class="pinganList3 Boxqiehuan">
+                        <em></em>
+                        <span></span>
+                    </p>
+                </div>
+                <div class="shishenBox">
+                    <div class="shishen show">
+                        <p class="tit">
+                            <span class="t1 t on">全部</span>
+                            <span class="t2 t">SSR</span>
+                            <span class="t3 t">SR</span>
+                            <span class="t4 t">R</span>
+                            <span class="t5 t">N</span>
+                            <span class="t6"></span>
+                        </p>
+                        <div class="shishenContent">
+                            <ul class="all show">
+                                <!--<li>-->
+                                    <!--<p><img src="images/index/shishen/200.png" alt=""><span></span><i><em>彼岸花</em></i></p>-->
+                                    <!--<p><img src="images/index/shishen/200.png" alt=""><span></span><i><em>彼岸花</em></i></p>-->
+                                <!--</li>-->
+                            </ul>
+                            <ul class="ssr ">
+                            </ul>
+                            <ul class="sr ">
+                            </ul>
+                            <ul class="r ">
+                            </ul>
+                            <ul class="n">
+                            </ul>
+                            <strong class="tab left"></strong>
+                            <strong class="tab right"></strong>
+                        </div>
+                    </div>
+                    <div class="yinyangshi">
+                        <div class="leftList">
+                            <p class="lls on">晴明<em></em></p>
+                            <p class="lls">神乐<em></em></p>
+                            <p class="lls">源博雅<em></em></p>
+                            <p class="lls">八百比丘尼<em></em></p>
+                        </div>
+                        <ul class="rightList">
+                            <li  class="on">
+                                <img src="images/index/zhujue_qingming.png" alt="">
+                                <div class="detailMassage">
+                                    <span class="tit t1"></span>
+                                    <h1>晴明</h1>
+                                    <p class="yinyangshiMassage">京都城中极具盛名的天才阴阳师
+                                        却不知为何失去了自己的记忆
+                                        等待着他的是寻回记忆的喜悦
+                                        还是不堪回首的残忍真相
+                                    </p>
+                                    <em></em>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/index/zhujue_shenle.png" alt="">
+                                <div class="detailMassage">
+                                    <span class="tit t2"></span>
+                                    <h1>神乐</h1>
+                                    <p class="yinyangshiMassage">善良而沉默的神秘少女
+                                        失忆后便跟随在晴明身边
+                                        拥有敏锐的直觉和强大的通灵能力
+                                        以及不为人知的过去
+                                    </p>
+                                    <em></em>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/index/zhujue_yby.png" alt="">
+                                <div class="detailMassage">
+                                    <span class="tit t3"></span>
+                                    <h1>源博雅</h1>
+                                    <p class="yinyangshiMassage">拥有皇室血统的贵族青年
+                                        擅长弓术与结界之术
+                                        性情孤傲爽直
+                                        但似乎一直在寻找某个重要的人
+                                    </p>
+                                    <em></em>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/index/zhujue_bqn.png" alt="">
+                                <div class="detailMassage">
+                                    <span class="tit t4"></span>
+                                    <h1>八百比丘尼</h1>
+                                    <p class="yinyangshiMassage">因误食人鱼肉而不老不死
+                                        能力超凡的流浪占卜师
+                                        一直在凤凰林中等待着
+                                        占卜之梦预言的命运之人
+                                    </p>
+                                    <em></em>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--攻略-->
+        <div class="gongluePos">
+            <div class="gonglue">
+                <div class="wenti">
+                    <div class="wentiTop">
+                        <input type="text" class="input" placeholder="请输入寮间问题">
+                        <p class="search"></p>
+                    </div>
+                    <div class="wentiBot">
+                        <div class="wentiBanner">
+                            <ul class="wentiBan">
+                                <li><img src="images/index/Ban2/1.jpg" alt=""></li>
+                                <li><img src="images/index/Ban2/2.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                        <ul class="wentiTab">
+                            <li class="on"></li>
+                            <li></li>
+                        </ul>
+                        <ul class="wentiList">
+                            <li class="wl"><span class="s1"></span><em></em></li>
+                            <li class="wl"><span class="s2"></span><em></em></li>
+                            <li class="wl"><span class="s3"></span><em></em></li>
+                            <li class="wl"><span class="s4"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gonglueMassage">
+                    <ul class="gltit">
+                        <li class="glhead gll on"></li>
+                        <i></i>
+                        <li class="gll g1"><em></em><span></span></li>
+                        <i></i>
+                        <li class="gll g2"><em></em><span></span></li>
+                        <i></i>
+                        <li  class="gll g3"><em></em><span></span></li>
+                        <i></i>
+                        <li  class="gll g4"><em></em><span></span></li>
+                    </ul>
+                    <div class="glContent">
+                        <ul class="glMoveBox">
+                            <li class="glBox">
+                                <!--<p><a href=""><strong></strong><span>-->
+                                    <!--【新手】友谊的见证！好友羁绊打开方式-->
+                                <!--</span><i>作者：无言</i></a></p>-->
+                            </li>
+                            <li class="glBox"></li>
+                            <li class="glBox"></li>
+                            <li class="glBox"></li>
+                            <li class="glBox"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--同人专区-->
+        <div class="tongrenPos">
+            <div class="tongren">
+                <div class="tit">
+                    <p class="mainTit"></p>
+                    <div class="overflow">
+                        <ul class="fuTit">
+                            <li class="f1 on"><span>精选推荐</span><em></em></li>
+                            <li class="f2 "><span>同人绘画</span><em></em></li>
+                            <li class="f3 "><span>玩家COS</span><em></em></li>
+                            <li class="f4 "><span>同人视频</span><em></em></li>
+                            <li class="f5 "><span>同人小说</span><em></em></li>
+                            <li class="f6 "><span>高手在民间</span><em></em></li>
+                        </ul>
+                        <a href=""><p class="pushWork"></p></a>
+                    </div>
+                </div>
+                <div class="trShow">
+                    <ul class="trMoveBox">
+                        <li class="trBox 1trb">
+                            <strong class="1sb"><a href=""><img src="images/index/fan/jxtj/1.jpg"alt=""><span></span><em></em></a>
+                            <p>妖刀姬cos【作者】@押切YAKI</p>
+                        </strong><strong class="2sb"><a href=""><img src="images/index/fan/jxtj/2.jpg" alt=""><span></span><em></em></a>
+                            <p>黑童子x白童子【作者】狗司令太子&大霖先森</p>
+                        </strong><strong class="3sb"><a href=""><img src="images/index/fan/jxtj/3.jpg" alt=""><span></span><em></em></a>
+                            <p>宰了那个阿爸【作者】茉莉瓜</p>
+                        </strong><strong class="4sb"><a href=""><img src="images/index/fan/jxtj/4.jpg" alt=""><span></span><em></em></a>
+                            <p>承包自己的大尾巴！【作者】remirror逆镜</p>
+                        </strong><strong class="5sb"><a href=""><img src="images/index/fan/jxtj/5.png" alt=""><span></span><em></em></a>
+                            <p>椒图原创皮肤【作者】溪初阳关</p>
+                        </strong><strong class="6sb"><a href=""><img src="images/index/fan/jxtj/6.jpg" alt=""><span></span><em></em></a>
+                            <p>午后日常【作者】玄米糕糕</p>
+                        </strong><strong class="7sb"><a href=""><img src="images/index/fan/jxtj/7.jpg" alt=""><span></span><em></em></a>
+                            <p>萤草合集【作者】腥臭的百瑞笔迹</p>
+                        </strong><strong class="8sb"><a href=""><img src="images/index/fan/jxtj/8.jpg" alt=""><span></span><em></em></a>
+                            <p>妖琴师新衣【作者】@日出的小太阳</p>
+                        </strong></li>
+                        <li class="trBox 2trb">
+                            <strong class="1sb"><a href=""><img src="images/index/fan/trhh/01.jpg" alt=""><span></span><em></em></a>
+                                <p>式神魔法少女服【作者】 罗丸二</p>
+                            </strong><strong class="2sb"><a href=""><img src="images/index/fan/trhh/02.jpg" alt=""><span></span><em></em></a>
+                                <p>寮日常，元、天、夫【作者】Koch_扣取</p>
+                            </strong><strong class="3sb"><a href=""><img src="images/index/fan/trhh/03.jpg" alt=""><span></span><em></em></a>
+                                <p>日常心机【作者】-瓜子--</p>
+                            </strong><strong class="4sb"><a href=""><img src="images/index/fan/trhh/04.jpg" alt=""><span></span><em></em></a>
+                                <p>酒茨逸事（二）【作者】KUMA没有猫</p>
+                            </strong><strong class="5sb"><a href=""><img src="images/index/fan/trhh/05.jpg" alt=""><span></span><em></em></a>
+                                <p>阴阳师角色西装【作者】想要飞起来的零啊</p>
+                            </strong><strong class="6sb"><a href=""><img src="images/index/fan/trhh/06.jpg" alt=""><span></span><em></em></a>
+                                <p>不可言说之事（二）【作者】精分兔乖乖</p>
+                            </strong><strong class="7sb"><a href=""><img src="images/index/fan/trhh/07.jpg" alt=""><span></span><em></em></a>
+                                <p>酒茨小故事【作者】湘立</p>
+                            </strong><strong class="8sb"><a href=""><img src="images/index/fan/trhh/08.jpg" alt=""><span></span><em></em></a>
+                                <p>合集【作者】阿婶sheen</p>
+                            </strong>
+                        </li>
+                        <li class="trBox 3trb">
+                            <strong class="1sb"><a href=""><img src="images/index/fan/wjCOS/1.jpg" alt=""><span></span><em></em></a>
+                                <p>姑获鸟cos【作者】papapa帕娘</p>
+                            </strong><strong class="2sb"><a href=""><img src="images/index/fan/wjCOS/2.jpg" alt=""><span></span><em></em></a>
+                                <p>山兔cos【作者】茶兔阿</p>
+                            </strong><strong class="3sb"><a href=""><img src="images/index/fan/wjCOS/3.jpg" alt=""><span></span><em></em></a>
+                                <p>神乐和莹草COS【作者】舔手指的毛毛虫</p>
+                            </strong><strong class="4sb"><a href=""><img src="images/index/fan/wjCOS/4.jpg" alt=""><span></span><em></em></a>
+                                <p>萤草cos【作者】亀梨郁</p>
+                            </strong><strong class="5sb"><a href=""><img src="images/index/fan/wjCOS/5.png" alt=""><span></span><em></em></a>
+                                <p>鬼女红叶cos【作者】流苏</p>
+                            </strong><strong class="6sb"><a href=""><img src="images/index/fan/wjCOS/6.png" alt=""><span></span><em></em></a>
+                                <p>青行灯cos【作者】Jiawen</p>
+                            </strong><strong class="7sb"><a href=""><img src="images/index/fan/wjCOS/7.png" alt=""><span></span><em></em></a>
+                                <p>吸血姬cos【作者】值木姐姐</p>
+                            </strong><strong class="8sb"><a href=""><img src="images/index/fan/wjCOS/8.jpg" alt=""><span></span><em></em></a>
+                                <p>性转茨木【作者】未岚RAN</p>
+                            </strong>
+                        </li>
+                        <li class="trBox 4trb">
+                            <strong class="1sb"><a href=""><img src="images/index/fan/trsp/01.jpg" alt=""><span></span><em></em></a>
+                                <p>华丽现世召唤，突破次元壁之旅【作者】《阴阳师》手游</p>
+                            </strong><strong class="2sb"><a href=""><img src="images/index/fan/trsp/02.jpg" alt=""><span></span><em></em></a>
+                                <p>【有声漫画】妖狐与天狗【莫逸工作室】【眠君】【作者】莫逸工作室&眠君</p>
+                            </strong><strong class="3sb"><a href=""><img src="images/index/fan/trsp/03.jpg" alt=""><span></span><em></em></a>
+                                <p>祝各位阴阳师大人六一节日快乐【作者】</p>
+                            </strong><strong class="4sb"><a href=""><img src="images/index/fan/trsp/04.jpg" alt=""><span></span><em></em></a>
+                                <p>【狗崽手书】樱色の梦【作者】@欧气零分偶偶偶</p>
+                            </strong><strong class="5sb"><a href=""><img src="images/index/fan/trsp/05.jpg" alt=""><span></span><em></em></a>
+                                <p>大天狗X妖狐同人伪动态漫画【作者】绘音配音&印巴巴【作者】绘音配音&印巴巴</p>
+                            </strong><strong class="6sb"><a href=""><img src="images/index/fan/trsp/06.jpg" alt=""><span></span><em></em></a>
+                                <p>源博雅与大天狗的惩罚游戏【作者】明矾矾矾矾</p>
+                            </strong><strong class="7sb"><a href=""><img src="images/index/fan/trsp/07.jpg" alt=""><span></span><em></em></a>
+                                <p>当然是选择原谅她【作者】《阴阳师》手游</p>
+                            </strong><strong class="8sb"><a href=""><img src="images/index/fan/trsp/08.jpg" alt=""><span></span><em></em></a>
+                                <p>O夫山泉广告时间，认真就输惹【作者】《阴阳师》手游</p>
+                            </strong>
+                        </li>
+                        <li class="trBox 5trb">
+                            <strong class="1sb"><a href=""><img src="images/index/fan/trxs/01.jpg" alt=""><span></span><em></em></a>
+                                <p>华之乱#酒茨【作者】八点三十二分</p>
+                            </strong><strong class="2sb"><a href=""><img src="images/index/fan/trxs/02.jpg" alt=""><span></span><em></em></a>
+                                <p>狗崽【作者】929****41</p>
+                            </strong><strong class="3sb"><a href=""><img src="images/index/fan/trxs/03.jpg" alt=""><span></span><em></em></a>
+                                <p>指间冰雪（姑获鸟×雪女）【作者】瑶台镜</p>
+                            </strong><strong class="4sb"><a href=""><img src="images/index/fan/trxs/04.png" alt=""><span></span><em></em></a>
+                                <p>阴阳师妖狐前身传记二【作者】Heyingyao</p>
+                            </strong><strong class="5sb"><a href=""><img src="images/index/fan/trxs/05.png" alt=""><span></span><em></em></a>
+                                <p>阴阳师妖狐前身传记一【作者】Heyingyao</p>
+                            </strong><strong class="6sb"><a href=""><img src="images/index/fan/trxs/06.png" alt=""><span></span><em></em></a>
+                                <p>阴阳寮的元宵节【作者】月朝歌＃阴阳师同人文大赛＃</p>
+                            </strong><strong class="7sb"><a href=""><img src="images/index/fan/trxs/07.jpg" alt=""><span></span><em></em></a>
+                                <p>阴阳见闻录【作者】我初初见你</p>
+                            </strong><strong class="8sb"><a href=""><img src="images/index/fan/trxs/08.jpg" alt=""><span></span><em></em></a>
+                                <p>万法皆空，有你无法【作者】小二上酒</p>
+                            </strong>
+                        </li>
+                        <li class="trBox 6trb">
+                            <strong class="1sb"><a href=""><img src="images/index/fan/gszmj/01.jpg" alt=""><span></span><em></em></a>
+                                <p>萌萌哒的小式神！【作者】会飞的鱼儿不想飞</p>
+                            </strong><strong class="2sb"><a href=""><img src="images/index/fan/gszmj/02.jpg" alt=""><span></span><em></em></a>
+                                <p>大天狗轻粘土【作者】包子酱Cion</p>
+                            </strong><strong class="3sb"><a href=""><img src="images/index/fan/gszmj/03.jpg" alt=""><span></span><em></em></a>
+                                <p>荒川之主轻粘土【作者】猫素粘土</p>
+                            </strong><strong class="4sb"><a href=""><img src="images/index/fan/gszmj/04.jpg" alt=""><span></span><em></em></a>
+                                <p>萤草超轻粘土【作者】美少女的魔法城堡</p>
+                            </strong><strong class="5sb"><a href=""><img src="images/index/fan/gszmj/05.jpg" alt=""><span></span><em></em></a>
+                                <p></p>
+                            </strong><strong class="6sb"><a href=""><img src="images/index/fan/gszmj/06.jpg" alt=""><span></span><em></em></a>
+                                <p>一目连超轻粘土【作者】亭临</p>
+                            </strong><strong class="7sb"><a href=""><img src="images/index/fan/gszmj/07.jpg" alt=""><span></span><em></em></a>
+                                <p>小天狗和小崽崽【作者】紫衣烟染</p>
+                            </strong><strong class="8sb"><a href=""><img src="images/index/fan/gszmj/08.jpg" alt=""><span></span><em></em></a>
+                                <p>好可爱的山兔！【作者】狼烟KID痴迷32</p>
+                            </strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--阴阳师-视频-->
+        <div class="yinyangVideo">
+            <div class="videoContent">
+                <div class="videoLeft">
+                    <p class="vl1"><em></em><span></span></p>
+                    <p class="vll">
+                        <span class="showImg"><img src="images/index/video/1.jpg" alt=""></span>
+                        <span class="describe">《阴阳师》核心玩法</span>
+                    </p>
+                    <p class="vll">
+                        <span class="showImg"><img src="images/index/video/2.jpg" alt=""></span>
+                        <span class="describe">《阴阳师》声优阵容</span>
+                    </p>
+                    <p class="vll">
+                        <span class="showImg"><img src="images/index/video/3.jpg" alt=""></span>
+                        <span class="describe">【阴阳师X极乐净土】抽式神不如跳舞</span>
+                    </p>
+                </div>
+                <div class="videoRight">
+                    <p class="vl1"><em></em><span></span></p>
+                    <p class="vll">
+                        <span class="showImg"><img src="images/index/video/4.jpg" alt=""></span>
+                        <span class="describe">《阴阳师》核心玩法</span>
+                    </p>
+                    <p class="vll">
+                        <span class="showImg"><img src="images/index/video/5.jpg" alt=""></span>
+                        <span class="describe">《阴阳师》声优阵容</span>
+                    </p>
+                    <p class="vll">
+                        <span class="showImg"><img src="images/index/video/6.jpg" alt=""></span>
+                        <span class="describe">【阴阳师X极乐净土】抽式神不如跳舞</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--活动专区-->
+        <div class="activitiesPos">
+            <div class="activities">
+                <div class="actLeft"></div>
+                <ul class="actRight">
+                    <li>
+                        <img src="images/index/act/1.png" alt="">
+                        <p>“浮妖百态”式神设计大赛</p>
+                    </li>
+                    <li>
+                        <img src="images/index/act/2.jpg" alt="">
+                        <p>农夫山泉“舔瓶我崽”揭盖有奖</p>
+                    </li>
+                    <li>
+                        <img src="images/index/act/3.jpg" alt="">
+                        <p>KFC跨界应援开启</p>
+                    </li>
+                    <li>
+                        <img src="images/index/act/4.jpg" alt="">
+                        <p>贴吧活动：地表最强告白开启</p>
+                    </li>
+                    <li>
+                        <img src="images/index/act/5.jpg" alt="">
+                        <p>大触觉醒第二季！同人插画大赛</p>
+                    </li>
+                    <li>
+                        <img src="images/index/act/6.jpg" alt="">
+                        <p>天机谱：有奖攻略计划</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--扫码专区-->
+        <div class="codePos">
+            <div class="codeAre">
+                <p class="yinyangLogo"></p>
+                <ul class="codeBox">
+                    <li>
+                        <p class="p1 pp">关注官方微博</p>
+                        <p class="p2 pp">扫描二维码</p>
+                        <span class="p3"></span>
+                        <i></i>
+                        <p class="p4">微博名：<span>网易阴阳师手游</span></p>
+                        <div class="codeShow"><img src="images/index/wb.png" alt=""></div>
+                    </li>
+                    <li>
+                        <p class="p1 pp">关注微信公众号</p>
+                        <p class="p2 pp">扫描二维码</p>
+                        <span class="p3 jj"></span>
+                        <i></i>
+                        <p class="p4">微信公众号：<span>yinyangshi163</span></p>
+                        <div class="codeShow"><img src="images/index/wx.jpg" alt=""></div>
+                    </li>
+                </ul>
+                <p class="kefu">
+                    <span class="k1"></span>
+                    <span>客户服务电话</span>
+                    <span class="tel">0571-26201179</span>
+                    <span class="line"></span>
+                    <span class="fankuiwenti"><a href="">问题反馈</a>&nbsp;&nbsp;<a href="">精灵咨询</a></span>
+                </p>
+                <p class="returnTop"></p>
+            </div>
+        </div>
+        <!--底部foot-->
+        <div class="footer">
+            <p class="footTit"></p>
+            <div class="Fhover">
+                <p class="ft1">前去体验</p>
+                <div class="ftchange">
+                    <p class="zhen"></p>
+                    <p class="downcode">
+                        <img src="images/2code.png" alt="">
+                        <span>扫码下载，进入游戏</span>
+                    </p>
+                </div>
+                <p class="paifang"></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
